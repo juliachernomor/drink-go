@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Drink Go</title>
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png" type= "image/png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/montserrat/montserrat-regular.woff2" as="style">
+  <link rel="preload" href="fonts/montserrat/montserrat-regular.woff" as="style">
+  <link rel="preload" href="fonts/montserrat/montserrat-medium.woff2" as="style">
+  <link rel="preload" href="fonts/montserrat/montserrat-medium.woff" as="style">
+  <link rel="preload" href="fonts/montserrat/montserrat-semibold.woff2" as="style">
+  <link rel="preload" href="fonts/montserrat/montserrat-semibold.woff" as="style">
+  <link rel="preload" href="fonts/montserrat/montserrat-bold.woff2" as="style">
+  <link rel="preload" href="fonts/montserrat/montserrat-bold.woff" as="style">
+</head>
+<body class="page__body">
+  <header class="page__header header">
+    <div class="header__logo-wrapper">
+      <a class="header__logo-image logo">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
+          <img class="logo__picture" src="img/svg/logo-mobile.svg" width="32" height="36" alt="Интернет-магазин">
+      </a>
+      <span class="header__logo-description">Интернет-магазин кофейных напитков</span>
+    </div>
+    <nav class="page__nav nav nav--closed main-nav--nojs">
+      <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="nav__wrapper">
+        <ul class="nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a>
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">
+              Каталог
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">
+              Доставка
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              О нас
+            </a>
+          </li>
+        </ul>
+        <ul class="nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__login js-login" href="#">
+              Войти
+            </a>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__cart" href="#">
+              Корзина
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
+    <section class="container__banner banner">
+      <div class="banner__wrapper-slider slider">
+        <h2 class="visually-hidden">Слайдер с кофейными напитками</h2>
+      <ul class="banner__list slider__list">
+        <li class="banner__item slider__item">
+          <div class="banner__image product-picture">
+          <a href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="
+              img/flat-white-desktop.webp 1x,
+              img/flat-white-desktop@2x.webp 2x
+              ">
+              <source type="image/webp" media="(min-width: 768px)" srcset="
+              img/flat-white-tablet.webp 1x,
+              img/flat-white-tablet@2x.webp 2x
+              ">
+          <source type="image/webp" srcset="
+              img/flat-white-mobile.webp 1x,
+              img/flat-white-mobile@2x.webp 2x
+              ">
+          <source type="image/png" media="(min-width:1440px)" srcset="
+              img/flat-white-desktop.png 1x,
+              img/flat-white-desktop@2x.png 2x
+              ">
+          <source type="image/png" media="(min-width:768px)" srcset="
+              img/flat-white-tablet.png 1x,
+              img/flat-white-tablet@2x.png 2x
+              ">
+          <img class="product-picture__image" src="img/flat-white-mobile.png" srcset="img/flat-white-mobile@2x.png"
+            width="280" height="280" loading="lazy" alt="Свежесваренный кофе без кофеина">
+            </picture>
+          </a>
+        </div>
+        <div class="banner__description product-description">
+          <span class="product-description__feature">Новинка!</span>
+          <h3 class="product-description__title">Декаф Флэт Уайт</h3>
+          <p class="product-description__description">Свежесваренный кофе без кофеина из Эфиопии
+            с натуральным фермерским молоком — то, что нужно
+            для расслабления после тяжёлого рабочего дня</p>
+            <div class="product-description__wrapper">
+              <span class="product-description__old-price">295₽</span>
+              <span class="product-description__fresh-price">225₽</span>
+            </div>
+            <button class="product-description__button button">Заказать</button>
+            </div>
+        </li>
+        <li class="banner__item slider__item">
+          <div class="banner__image product-picture">
+          <a href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="
+              img/lavender-desktop.webp 1x,
+              img/lavender-desktop@2x.webp 2x
+              ">
+              <source type="image/webp" media="(min-width: 768px)" srcset="
+              img/lavender-tablet.webp 1x,
+              img/lavender-tablet@2x.webp 2x
+              ">
+          <source type="image/webp" srcset="
+              img/lavender-mobile.webp 1x,
+              img/lavender-mobile@2x.webp 2x
+              ">
+          <source type="image/png" media="(min-width:1440px)" srcset="
+              img/lavender-desktop.png 1x,
+              img/lavender-desktop@2x.png 2x
+              ">
+          <source type="image/png" media="(min-width:768px)" srcset="
+              img/lavender-tablet.png 1x,
+              img/lavender-tablet@2x.png 2x
+              ">
+          <img class="product-picture__image" src="img/lavender-mobile.png" srcset="img/lavender-mobile@2x.png"
+            width="280" height="280" loading="lazy" alt="Свежесваренный кофе без кофеина">
+            </picture>
+          </a>
+        </div>
+        <div class="banner__description product-description">
+          <span class="product-description__feature">Новинка!</span>
+          <h3 class="product-description__title">Лавандовый Латте</h3>
+          <p class="product-description__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <div class="product-description__wrapper">
+              <span class="product-description__old-price">285₽</span>
+              <span class="product-description__fresh-price">265₽</span>
+            </div>
+          <button class="product-description__button button">Заказать</button>
+        </div>
+        </li>
+        <li class="banner__item slider__item">
+          <a href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="
+              img/espresso-desktop.webp 1x,
+              img/espresso-desktop@2x.webp 2x
+              ">
+              <source type="image/webp" media="(min-width: 768px)" srcset="
+              img/espresso-tablet.webp 1x,
+              img/espresso-tablet@2x.webp 2x
+              ">
+          <source type="image/webp" srcset="
+              img/espresso-mobile.webp 1x,
+              img/espresso-mobile@2x.webp 2x
+              ">
+          <source type="image/png" media="(min-width:1440px)" srcset="
+              img/espresso-desktop.png 1x,
+              img/espresso-desktop@2x.png 2x
+              ">
+          <source type="image/png" media="(min-width:768px)" srcset="
+              img/espresso-tablet.png 1x,
+              img/espresso-tablet@2x.png 2x
+              ">
+          <img class="banner__image" src="img/espresso-mobile.png" srcset="img/espresso-mobile@2x.png"
+            width="280" height="280" loading="lazy" alt="Свежесваренный кофе без кофеина">
+            </picture>
+          </a>
+        </div>
+        <div class="banner__description product-description">
+          <span class="product-description__feature">Новинка!</span>
+          <h3 class="product-description__title">Тройной Эспрессо</h3>
+          <p class="product-description__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+            <div class="product-description__wrapper">
+              <span class="product-description__old-price">395₽</span>
+              <span class="product-description__fresh-price">375₽</span>
+            </div>
+          <button class="product-description__button button">Заказать</button>
+          </div>
+        </li>
+        <button class="slider__prev" type="button">Предыдущий слайдер</button>
+        <button class="slider__next" type="button">Следующий слайдер</button>
+      </div>
+      <p class="slider__toggles">
+        <button class="slider__toggle slider__toggle--current" type="button"></button>
+        <button class="slider__toggle" type="button"></button>
+        <button class="slider__toggle" type="button"></button>
+      </p>
+      <section class="container__advantages advantages">
+          <h2 class="advantages__title">Преимущества</h2>
+          <span>Главные причины выбрать Drink2Go</span>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <h3 class ="advantage__title">Скорость</h3>
+              <p class="advantages__description">
+                Готовый напиток всегда под рукой — просто открой банку.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <h3 class ="advantage__title">Удобство</h3>
+              <p class="advantages__description">
+                Легко помещается и в карман,и в маленькую сумочку.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <h3 class ="advantage__title">Бодрость</h3>
+              <p class="advantages__description">
+                Сбалансированная доза кофеина даст мощный заряд энергии.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <h3 class ="advantage__title">Экологичность</h3>
+              <p class="advantages__description">
+                Вся упаковка сделана из перерабатываемых материалов.
+              </p>
+            </li>
+
+          </ul>
+        </section>
+
+
+
+      </div>
+</body>
+</html>
