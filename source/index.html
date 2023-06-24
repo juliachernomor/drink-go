@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Drink Go</title>
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png" type= "image/png">
@@ -196,6 +196,7 @@
           <button class="product-description__button button">Заказать</button>
           </div>
         </li>
+      </ul>
         <button class="slider__prev" type="button">Предыдущий слайдер</button>
         <button class="slider__next" type="button">Следующий слайдер</button>
       </div>
@@ -204,6 +205,8 @@
         <button class="slider__toggle" type="button"></button>
         <button class="slider__toggle" type="button"></button>
       </p>
+    </div>
+    </section>
       <section class="container__advantages advantages">
           <h2 class="advantages__title">Преимущества</h2>
           <span>Главные причины выбрать Drink2Go</span>
@@ -232,12 +235,97 @@
                 Вся упаковка сделана из перерабатываемых материалов.
               </p>
             </li>
-
           </ul>
         </section>
 
+        <section class="container__catalog catalog">
+          <h2 class="catalog__title">Каталог</h2>
+          <span class="catalog__description">Каталог кофейных напитков</span>
+        <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__fieldset fieldset range">
+              <legend class="range__title">Цена</legend>
+              <div class="range-scale">
+                <div class="range-bar" style="left:8px; width: 206.5px">
+                    <button class="range-toggle toggle-min" type="button"><span class="visually-hidden">Изменить минимальную цену.</span></button>
+                    <button class="range-toggle toggle-max"  type="button"><span class="visually-hidden">Изменить максимальную цену.</span></button>
+                </div>
+            </div>
+                        <div class="rangge__wrapper">
+                            <input class="range__search-from" type="text" name="from"  placeholder="0" required>
+                            <input  class="range__search-to" type="text" name="to" placeholder="9000" required>
+                        </div>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset radio">
+            <legend class="radio__title">Наличие молока</legend>
+              <ul class="radio__list">
+                <li class="radio__item">
+                  <label class="radio__label">
+                    <input class="radio__input visually-hidden" type="radio" name="milk" value="Неважно" checked>
+                    <span class="radio__control-mark"></span>
+                    <span class="radio__control-label">Неважно</span>
+                  </label>
+                </li>
+                <li class="radio__item">
+                  <label class="radio__label">
+                    <input class="radio__input visually-hidden" type="radio" name="milk" value="Только животное">
+                    <span class="radio__control-mark"></span>
+                    <span class="radio__control-label">Только животное</span>
+                  </label>
+                </li>
+                <li class="radio__item">
+                  <label class="radio__label">
+                    <input class="radio__input visually-hidden" type="radio" name="milk"
+                      value="Только растительное">
+                    <span class="radio__control-mark"></span>
+                    <span class="radio__control-label">Только растительное</span>
+                  </label>
+                </li>
+                <li class="radio__item">
+                  <label class="radio__label">
+                    <input class="radio__input visually-hidden" type="radio" name="milk"
+                      value="Без молока" disabled>
+                    <span class="radio__control-mark"></span>
+                    <span class="radio__control-label">Без молока</span>
+                  </label>
+                </li>
+              </ul>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset checkbox">
+            <legend class="checkbox__title">Страна произрастания</legend>
+            <ul class="checkbox__list">
+              <li class="checkbox__item">
+                <label class="checkbox__label">
+                  <input class="checkbox__input" type="checkbox" name="brazil" checked>
+                  <span class="checkbox__control-label">Бразилия</span>
+                </label>
+              </li>
+              <li class="group__item checkbox">
+                <label class="checkbox__label">
+                  <input class="checkbox__input" type="checkbox" name="efiopia">
+                  <span class="checkbox__control-label">Эфиопия</span>
+                </label>
+              </li>
+              <li class="group__item checkbox">
+                <label class="checkbox__label">
+                  <input class="checkbox__input" type="checkbox" name="colambia">
+                  <span class="checkbox__control-label">Колумбия</span>
+                </label>
+              </li>
+              <li class="group__item checkbox">
+                <label class="checkbox__label">
+                  <input class="checkbox__input" type="checkbox" name="costa-rika">
+                  <span class="checkbox__control-label">Коста-Рика</span>
+                </label>
+              </li>
+              <li class="group__item checkbox">
+                <label class="checkbox__label">
+                  <input class="checkbox__input" type="checkbox" name="pery" disabled>
 
+                  <span class="checkbox__control-label">Перу</span>
+                </label>
+              </li>
+            </ul>
 
-      </div>
+              </section>
 </body>
 </html>
