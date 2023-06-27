@@ -1,1 +1,23 @@
+@use "../variables" as v;
 
+  .header {
+    background-color: v.$base-white;
+  }
+
+  .header__logo-wrapper {
+    position: absolute;
+    content:"";
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 32px;
+    min-height: 60px;
+    margin-top: auto;
+  }
+
+  @media (max-width: v.$mobile-width-only) {
+    .header__logo-description {
+      display: none;
+    }
+  }

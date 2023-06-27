@@ -1,0 +1,14 @@
+.logo {
+  display:block;
+  margin-left:auto;
+  margin-right:auto
+}
+
+.logo__picture {
+  display: flex;
+  align-items: center;
+  width: 32px;
+  height: 36px;
+  margin: auto 0;
+  object-fit: contain;
+}

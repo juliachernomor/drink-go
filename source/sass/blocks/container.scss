@@ -1,0 +1,7 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.container__slider {
+  width: 320px;
+  min-height: 656px;
+}

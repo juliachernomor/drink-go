@@ -1,0 +1,13 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.banner__list{
+  @include m.list-rules-reset;
+}
+
+.banner-slider{
+  position: relative;
+}
+
+
+

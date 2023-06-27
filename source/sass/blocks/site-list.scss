@@ -1,0 +1,35 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+  .site-list__item {
+    position: relative;
+    min-height: 16px ;
+    width: 280px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin: 0;
+    color: v.$base-black;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+  }
+
+  @media (max-width: v.$mobile-width-only) {
+    .site-list__item::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -500px;
+      height: 1px;
+      width: 100000%;
+      background-color: v.$light-purple;
+    }
+  }
+
+  .site-list__link{
+    color: v.$base-black;
+    text-decoration: none;
+  }

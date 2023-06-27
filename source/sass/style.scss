@@ -1,9 +1,19 @@
 /* GLOBAL */
-@import "global/variables";
-@import "global/global";
-@import "global/fonts";
+@use "variables";
+@use "fonts";
+@use "mixins";
 
 /* BLOCKS */
-@import "blocks/header";
-@import "blocks/checkbox";
-@import "blocks/map";
+@use "blocks/header";
+@use "blocks/checkbox";
+@use "blocks/map";
+@use "blocks/page";
+@use "blocks/visually-hidden";
+@use "blocks/nav";
+@use "blocks/logo";
+@use "blocks/user-list";
+@use "blocks/site-list";
+@use "blocks/banner";
+@use "blocks/container";
+@use "blocks/slider";
+@use "blocks/swiper";

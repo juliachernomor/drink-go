@@ -1,0 +1,37 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+ display: none;
+}
+
+.container__slider .swiper-button-prev{
+  position: absolute;
+  content:"";
+  top:50%;
+  left:0;
+  background-image: url("/img/icons/stack.svg#left-row");
+  background-repeat: no-repeat;
+  background-size: 11px 20px;
+  width: 11px;
+  height: 20px;
+}
+.container__slider .swiper-button-next{
+  position: absolute;
+  content:"";
+  top:50%;
+  left:280px;
+  background-image: url("/img/icons/stack.svg#left-row");
+  transform: rotate(180deg);;
+  background-repeat: no-repeat;
+  background-size: 11px 20px;
+  width: 11px;
+  height: 20px;
+}
+
+// @media (max-width: v.$mobile-width-only) {
+//  .swiper-pagination {
+//   display: none;
+//  }
+// }

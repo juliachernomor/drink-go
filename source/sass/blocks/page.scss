@@ -1,0 +1,44 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+@use "../fonts" as *;
+
+.page {
+  @include m.intends-reset;
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: v.$base-black;
+}
+
+.page__body {
+  @include m.intends-reset;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100%;
+  width: 320px;
+  margin:  auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+  overflow-x: hidden;
+}
+
+.page__header{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  width: 280px;
+  min-height: 60px;
+}
+
+.page__nav{
+  position: relative;
+  display: flex;
+  justify-content: end;
+  width: 280px;
+}
