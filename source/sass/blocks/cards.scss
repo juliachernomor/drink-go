@@ -1,0 +1,17 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.cards__list {
+  display: grid;
+  row-gap:20px;
+  @include m.list-rules-reset;
+}
+
+.cards__item {
+  width: 280px;
+  min-height: 420px;
+  padding: 40px 20px 10px 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
+

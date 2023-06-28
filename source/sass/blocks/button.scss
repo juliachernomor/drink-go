@@ -1,0 +1,35 @@
+@use "../variables" as v;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", "Arial", sans-serif;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 4px;
+  color: v.$base-white;
+  background-color: v.$purple-dark;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+background-color: v.$purple-lighter;
+color: v.$base-white;
+}
+
+.button:active {
+background-color:v.$purple-darker;
+color: v.$base-white;
+}
+
+.button:disable {
+  background-color:v.$gray-dark;
+  color: v.$base-white;
+}

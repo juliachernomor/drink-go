@@ -1,0 +1,61 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+.card {
+  font-family: "Montserrat", "Arial", sans-serif;
+  background-color: v.$base-white;
+}
+
+.card__title {
+  margin: 20px 0 4px 0;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.card__description {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.card__wrapper {
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  margin: 0 0 10px 0;
+}
+
+.card__price{
+  text-align: left;
+  width: 80px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.card__order{
+flex: 1 0 auto;
+  max-width: 140px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.card__order-button-text{
+  max-height: 20px;
+  font-size: 14px;
+  line-height: 20px
+
+}
+
+.card__order-button-picture{
+  height: 16px;
+  margin-right: 5px;
+}
+

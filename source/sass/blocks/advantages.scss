@@ -1,0 +1,107 @@
+
+@use "../mixins" as m;
+@use "../variables" as v;
+.advantages {
+  text-align: center;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.advantages__feature {
+  width: 100%;
+  display: block;
+  padding-top: 50px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: v.$purple-dark;
+}
+
+.advantages__title {
+  width: 100%;
+  font-size: 24px;
+  font-family: Montserrat;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0 0 36px 0;
+}
+
+.advantages__list {
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  @include m.list-rules-reset;
+  row-gap: 17px;
+  margin-bottom: 45px;
+}
+
+.advantages__item {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.advantages__item--clock::before {
+   content: "";
+  grid:1/2;
+  width: 50px;
+  height: 56px;
+  margin: 0 auto 10px auto;
+  background-image: url("/img/icons/stack.svg#clock");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 56px;
+}
+
+.advantages__item--pocket::before {
+  content: "";
+  grid:1/2;
+ width: 52px;
+ height: 56px;
+ margin: 0 auto 10px auto;
+ background-image: url("/img/icons/stack.svg#pocket");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 52px 56px;
+}
+
+.advantages__item--lightning::before {
+  content: "";
+  grid:1/2;
+ width: 42px;
+ height: 56px;
+ margin: 0 auto 10px auto;
+ background-image: url("/img/icons/stack.svg#lightning");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 42px 56px;
+}
+
+.advantages__item--leaf::before {
+  content: "";
+  grid:1/2;
+ width: 46px;
+ height: 56px;
+ margin: 0 auto 10px auto;
+ background-image: url("/img/icons/stack.svg#leaf");
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 46px 56px;
+}
+
+.advantage__title {
+  grid-row: 2/3;
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.advantages__description {
+  grid-row: 3/4;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 15px 0;
+}

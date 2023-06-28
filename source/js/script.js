@@ -14,19 +14,20 @@ effectMenu();
 
 new Swiper('.swiper', {
   navigation: {
-    nextEl:'.container__slider .swiper-button-next',
-    prevEl:'.container__slider .swiper-button-prev',
+    nextEl:'.container-slider .swiper-button-next',
+    prevEl:'.container-slider .swiper-button-prev',
   },
-  loop: true,
-        autoplay: {
-            delay: 15000,
-            stopOnLastSlide: false,
-        },
+  // loop: true,
+  //       autoplay: {
+  //           delay: 15000,
+  //           stopOnLastSlide: false,
+  //       },
   pagination: {
     el: '.swiper-pagination',
     clickable:true,
-  }
+  },
 });
+
 
 
 

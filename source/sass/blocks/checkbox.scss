@@ -1,35 +1,24 @@
+@use "../variables" as v;
+@use "../mixins" as m;
 
-.checkbox__input[type="checkbox"] {
-  position: relative;
-  appearance: none;
-  width:42px;
-  height: 24px;
-  border-radius: 12px;
-  background-color: #bdbdbd;
-  outline:none;
-  cursor:pointer;
-  transition: background-color 0.09s ease-in-out;
+.checkbox {
+  width: 280px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color:v.$base-black;
+  text-align: left;
+}
+.checkbox__title {
+  width: 280px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0 0 21px 0;
 }
 
-.checkbox__input[type="checkbox"]:checked {
-  appearance: none;
-  background-color: #7859cf;
+.checkbox__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px ;
 }
 
-.checkbox__input[type="checkbox"]::after {
-  position: absolute;
-  content:"";
-  appearance: none;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  transform:scale(0.7);
-  left:0;
-  transition: left 0.09s ease-in-out;
-}
 
-.checkbox__input[type="checkbox"]:checked::after {
-  appearance: none;
-  left:18px;
-}

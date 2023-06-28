@@ -1,0 +1,43 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+
+.slider-item {
+  width: 100%;
+  min-height: 656px;
+  overflow: hidden;
+}
+
+.slider-item--gray {
+  display: block;
+  width: 1000%;
+  min-height: 656px;
+  background-color: v.$gray;
+  }
+
+.slider-item--purple {
+  display: block;
+  width: 1000%;
+  min-height: 656px;
+  background-color: v.$purple;
+}
+.slider-item--beige {
+  display: block;
+  width: 1000%;
+  min-height: 656px;
+  background-color: v.$beige;
+}
+
+.slider-item__image {
+  overflow: hidden;
+  width: 100%;
+  margin: 20px auto 6px auto;
+  box-sizing: border-box;
+}
+
+.slider-item__description {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}

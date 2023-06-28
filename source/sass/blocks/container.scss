@@ -1,7 +1,44 @@
 @use "../mixins" as m;
 @use "../variables" as v;
+.container{
+  overflow: hidden;
+  min-width: 320px;
+}
 
-.container__slider {
+.container__wrapper{
   width: 320px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
   min-height: 656px;
+}
+
+.container__advantages {
+  display: block;
+  width: 320px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 902px;
+}
+
+.container__filter {
+  display: block;
+  width: 320px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.container__map{
+  min-width: 320px;
+  height: 420px;
+}
+
+.container__footer {
+  display: block;
+  width: 320px;
+  padding: 0 20px ;
+  box-sizing: border-box;
+  margin: 0 auto;
 }

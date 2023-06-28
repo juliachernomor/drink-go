@@ -1,0 +1,36 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.fieldset-button {
+  min-height: 40px;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.fieldset-button__title {
+  margin: 0;
+}
+
+.fieldset-button__apply,
+.fieldset-button__reset {
+  margin-left:2px;
+  width: 280px;
+}
+
+.fieldset-button__apply--color {
+background-color: v.$purple-dark;
+}
+
+.fieldset-button__reset--color{
+  background-color: v.$base-white;
+  color:v.$purple-dark;
+}
+
+.fieldset-button__reset--margin {
+  margin-bottom: 40px;
+}
+
+.fieldset-button__reset:disable {
+  background-color:v.$light-gray;
+  color:v.$base-white;
+}

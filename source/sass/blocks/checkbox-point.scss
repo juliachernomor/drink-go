@@ -1,0 +1,74 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.checkbox-point {
+  display: block;
+  font-family: "Montserrat", "Arial", sans-serif;
+
+}
+
+.checkbox-point__control-label {
+  display: block;
+  min-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  margin:0 0 20px 54px;
+}
+
+.checkbox-point__label{
+  width: 100%;
+}
+
+.checkbox-point__control-mark {
+  position: absolute;
+  margin:0 0 20px 3px;
+  appearance: none;
+  width:42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: v.$gray-dark;
+  outline:none;
+  cursor:pointer;
+  transition: background-color 0.09s ease-in-out;
+}
+
+.checkbox-point__control-mark:hover,
+.checkbox-point__control-mark:focus {
+  outline: 2px solid v.$purple-lighter;
+  background-color: rgba(120, 89, 207,0.25);
+}
+
+.checkbox-point__control-mark:checked {
+  appearance: none;
+  background-color: v.$purple-dark;
+}
+
+.checkbox-point__control-mark::after {
+  position: absolute;
+  content:"";
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: v.$base-white;
+  transform:scale(0.7);
+  top:0;
+  left:0;
+  transition: left 0.09s ease-in-out;
+}
+
+.checkbox-point__control-mark:checked::after {
+  appearance: none;
+  left:18px;
+}
+
+.checkbox-point__control-mark:disabled::after {
+  outline: none;
+  background-color: v.$dark-white;
+}
+
+.checkbox-point__control-mark:disabled {
+  background-color: v.$light-gray;
+}
+

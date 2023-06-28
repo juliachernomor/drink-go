@@ -1,0 +1,81 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+.radio-point {
+  position: relative;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.radio-point__control-label {
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+  text-align: left;
+  margin:0 0 20px 36px;
+}
+
+
+.radio-point__control-mark {
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: v.$base-white;
+  border: 2px solid v.$gray-dark;
+  cursor: pointer;
+}
+
+.radio-point__input[type="radio"]:checked ~ .radio-point__control-mark {
+   border: 2px solid v.$purple-dark;
+}
+
+
+.radio-point__input[type="radio"]:hover + .radio-point__control-mark::before,
+.radio-point__input[type="radio"]:focus + .radio-point__control-mark::before {
+  position: absolute;
+  content: "";
+  top: 14%;
+  left: 12%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(120, 89, 207,0.25);
+}
+
+.radio-point__input[type="radio"]:checked + .radio-point__control-mark::before {
+  position: absolute;
+  content: "";
+  top: 14%;
+  left: 12%;
+  width: 16px;
+  height: 16px;
+  background-color: v.$purple-dark;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.radio-point__input[type="radio"]:hover ~ .radio-point__control-mark,.radio-point__input[type="radio"]:focus ~ .radio-point__control-mark {
+  border: 2px solid v.$purple-dark;
+}
+
+.radio-point__input[type="radio"]:disabled:checked ~ .radio-point__control-mark::before {
+  background-color: v.$light-gray;
+}
+
+.radio-point__input[type="radio"]:disabled ~ .radio-point__control-label {
+  color:v.$light-gray;
+}
+
+.radio-point__input[type="radio"]:disabled ~ .radio-point__control-mark {
+  border: 2px solid v.$light-gray;
+}
+
+.radio-point__input[type="radio"]:hover:disabled + .radio-point__control-mark::before,
+.radio-point__input[type="radio"]:focus:disabled + .radio-point__control-mark::before {
+  background-color: v.$base-white;
+}

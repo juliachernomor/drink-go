@@ -1,0 +1,106 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.pagination {
+padding: 40px 0 44px 0;
+}
+
+.pagination__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+  position: relative;
+  column-gap: 20px;
+}
+
+
+.pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: v.$purple-dark;
+  background-color: v.$base-white;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination__link:hover,
+.pagination__link:focus {
+    background-color: v.$purple-lighter;
+    color:v.$base-white;
+}
+
+
+
+.pagination__link:active {
+    background-color: v.$purple-darker;
+    color:v.$base-white;
+}
+
+@media (max-width: v.$mobile-width-only) {
+  .pagination__row{
+    display: none;
+  }
+
+  .pagination__link-prev,
+  .pagination__link-next {
+    position: relative;
+  }
+
+
+  .pagination__link-prev::after {
+    position: absolute;
+    content:"";
+    top:40%;
+    left: 35%;
+    mask-image:  url("/img/icons/stack.svg#left-row");
+    background-color:v.$purple-dark;
+    background-position: center;
+    background-size: 12px 10px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 10px;
+  }
+
+  .pagination__link-next::after {
+    position: absolute;
+    content:"";
+    top:40%;
+    right: 35%;
+    mask-image:  url("/img/icons/stack.svg#left-row");
+    background-position: center;
+    background:  v.$purple-dark;
+    background-repeat: no-repeat;
+    background-size: 12px 10px;
+    width: 12px;
+    height: 10px;
+    transform: rotate(180deg);
+  }
+}
+
+
+.pagination__link-prev:hover.pagination__link-prev::after,
+.pagination__link-next:hover.pagination__link-next::after,
+.pagination__link-prev:focus.pagination__link-prev::after,
+.pagination__link-next:focus.pagination__link-next::after {
+  background-color: v.$base-white;
+}
+
+
+.pagination__current-page {
+  background-color: v.$dark-white;
+  color:v.$base-black;
+
+}
+

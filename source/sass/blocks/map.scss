@@ -1,4 +1,60 @@
+.map {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  max-height: 420px;
+  margin: 0 auto;
+}
+
+.map__link{
+  position: relative;
+  max-height: 420px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.map__link::after{
+  position: absolute;
+  content:"";
+  top:44%;
+  left: 49%;
+  width: 38px;
+  height: 50px;
+  background-image: url("/img/icons/stack.svg#map-pin");
+  background-repeat:no-repeat;
+  background-size: 38px 50px;
+}
+
+.map__static-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.map__interactive-map {
+  display: block;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  min-width: 320px;
+  width: 100%;
+  max-height: 420px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+
+
+
+.map__interactive-map--nojs {
+  display: none;
+}
+
 #map {
   height: 420px;
-  width: 320px;
+  min-width: 320px;
 }
+
+

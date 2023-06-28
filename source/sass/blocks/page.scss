@@ -4,12 +4,12 @@
 
 .page {
   @include m.intends-reset;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0  auto;
   font-family: "Montserrat", "Arial", sans-serif;
   color: v.$base-black;
+
 }
 
 .page__body {
@@ -19,10 +19,8 @@
   margin-left: auto;
   margin-right: auto;
   min-height: 100%;
-  width: 320px;
+  min-width: 320px;
   margin:  auto;
-  box-sizing: border-box;
-  padding: 0 20px;
   overflow-x: hidden;
 }
 
@@ -32,7 +30,10 @@
   position: relative;
   display: flex;
   justify-content: start;
-  width: 280px;
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
   min-height: 60px;
 }
 

@@ -1,0 +1,35 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+.sort {
+  display: flex;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.sort__title {
+  max-width: 107px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0 10px 0 3px;
+  padding: 0;
+}
+
+.sort__select{
+  margin: 0;
+  max-width: 165px;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  border:none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 15px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  background-color:v.$dark-white;
+}
+
+.sort__select:hover,
+.sort__select:focus{
+ background-color:rgba(120, 89, 207,0.25);
+}

@@ -1,0 +1,127 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+
+.range {
+  width: 280px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  text-align: start;
+}
+
+.range__title {
+  width: 280px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0 0 30px 0;
+}
+
+
+.range-scale {
+  position: relative;
+  height: 2px;
+  margin: 0 0 33px 0;
+  background-color: v.$light-gray;
+}
+
+.range-bar {
+  position: absolute;
+  top:-1px;
+  height: 4px;
+  background-color: v.$purple-lighter;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: v.$base-white;
+  border-radius: 50%;
+  border: 2px solid v.$purple-lighter;
+  cursor: pointer;
+}
+
+.range-toggle:hover,
+.range-toggle:focus{
+  background-color: v.$base-white;
+  background-image: url("/img/icons/stack.svg#range-hover-focus");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 2px;
+  outline: none;
+}
+
+.range-toggle:active {
+  background-color: v.$base-white;
+  background-image: url("/img/icons/stack.svg#range-active");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 2px;
+}
+
+.range-toggle:default {
+  background-color: v.$base-white;
+  border: 2px solig v.$gray-dark;
+}
+
+.range-toggle:default {
+  background-color: v.$dark-white;
+}
+
+.range-toggle__toggle-min {
+  top: -9px;
+  left: -10px;
+}
+
+.range-toggle__toggle-max {
+  top: -9px;
+  right: -9px;
+}
+
+.range__wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 30px 0;
+}
+
+.range__search {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  width: 118px;
+  background-color: v.$base-white;
+  color: v.$base-black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 2px solid v.$purple-lighter;
+  padding: 8px 9px 8px 9px;
+  cursor: pointer;
+}
+
+
+.range__search::placeholder {
+  background-color: v.$base-white;
+  color:v.$gray-dark;
+}
+
+.range__search:hover,
+.range__search:focus {
+  border: 2px solid v.$purple-darker;
+  outline: none;
+
+}
+
+.range__search:disabled {
+  border: 2px solid v.$light-gray;
+  background-color: v.$dark-white;
+}
+
+
+.range__search::placeholder:disabled {
+  background-color: v.$dark-white;
+}

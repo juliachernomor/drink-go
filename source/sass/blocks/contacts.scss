@@ -1,0 +1,58 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.contacts__title{
+    margin: 20px 0 20px 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+}
+
+.contacts__wrapper{
+  position: relative;
+  display: grid;
+  grid-template-columns: 13px 261px;
+  gap: 16px 6px ;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.contacts__wrapper::after{
+  position: absolute;
+  content: "";
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: url("/img/icons/stack.svg#adress");
+  background-size: 13px 16px;
+  background-repeat: no-repeat;
+  width: 13px;
+  height: 16px;
+}
+
+.contacts__wrapper::before{
+  position: absolute;
+  content: "";
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: url("/img/icons/stack.svg#phone");
+  background-size: 13px 16px;
+  background-repeat: no-repeat;
+  width: 13px;
+  height: 16px;
+}
+
+.contacts__text{
+  padding: 0;
+  margin: 0;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.contacts__phone {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  color:v.$base-black;
+  text-decoration: none;
+}

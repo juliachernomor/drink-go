@@ -5,6 +5,8 @@ const template = document.querySelector('#slider-card');
 export const createSliderCard = (arr)=> {
     for(let i=0; i < arr.length; i++ )  {
 const item=template.content.cloneNode(true);
+const itemColor = item.querySelector('.slider-item');
+itemColor.classList.add('slider-item--'+ arr[i].color);
 item.querySelector('.product-picture__png').src = arr[i].src;
 item.querySelector('.product-picture__png').srcset=arr[i].srcset;
 item.querySelector('.product-picture__png768px').srcset=arr[i].srcsetPng768;

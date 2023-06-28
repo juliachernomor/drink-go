@@ -1,0 +1,12 @@
+@use "../mixins" as m;
+@use "../variables" as v;
+
+.copyright__link{
+  display: block;
+  text-align: center;
+  color: v.$gray-dark;
+  text-decoration: none;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 12px;
+line-height: 16px;
+}
