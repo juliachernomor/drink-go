@@ -14,16 +14,16 @@ effectMenu();
 
 new Swiper('.swiper', {
   navigation: {
-    nextEl:'.container-slider .swiper-button-next',
-    prevEl:'.container-slider .swiper-button-prev',
+    nextEl:'.my-swiper-prev',
+    prevEl:'.my-swiper-next',
   },
-  // loop: true,
-  //       autoplay: {
-  //           delay: 15000,
-  //           stopOnLastSlide: false,
-  //       },
+  loop: true,
+        autoplay: {
+            delay: 15000,
+            stopOnLastSlide: false,
+        },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.my-swiper-pagination',
     clickable:true,
   },
 });

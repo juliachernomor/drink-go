@@ -1,22 +1,62 @@
 @use "../mixins" as m;
 @use "../variables" as v;
 
+@media (max-width: v.$tablet-width-only){
   .site-list__item {
-    position: relative;
-    min-height: 16px ;
-    width: 280px;
-    padding: 20px 0;
-    box-sizing: border-box;
-    background-color: #fff;
+    display: flex;
+    column-gap: 20px;
+    padding: 32px 20px;
     margin: 0;
     color: v.$base-black;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
     text-transform: uppercase;
+    box-sizing: border-box;
+    background-color: #fff;
+    min-height: 16px;
+    letter-spacing: 0.3px;
+  }
+}
 
+@media (max-width: v.$mobile-width-only){
+.site-list__item {
+  display: block;
+    position: relative;
+    min-height: 16px;
+    width: 280px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    color: v.$base-black;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+}
+
+
+  @media (min-width: v.$desktop-width){
+    .site-list__item {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      padding: 32px 20px;
+      text-transform: uppercase;
+      margin: 0;
+      color: v.$base-black;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
+.site-list__item {
+  position: relative;
+}
   @media (max-width: v.$mobile-width-only) {
     .site-list__item::after {
       position: absolute;
@@ -32,4 +72,21 @@
   .site-list__link{
     color: v.$base-black;
     text-decoration: none;
+  }
+
+    @media(min-width: v.$tablet-width){
+      .site-list__item--current{
+        position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: calc(100% - 1px);
+        left: 0;
+        height: 2px;
+        background-color: v.$purple-dark;
+        width: 100%;
+        z-index: 2;
+      }
+    }
   }

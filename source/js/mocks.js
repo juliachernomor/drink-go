@@ -41,7 +41,7 @@ export const sliderCard = [
     srcsetWebp768:"img/flat-white-tablet.webp 1x,img/flat-white-tablet@2x.webp 2x",
     srcsetWebp1440:"img/flat-white-desktop.webp 1x,img/flat-white-desktop@2x.webp 2x",
     title:"Декаф Флэт Уайт",
-    description:"Свежесваренный кофе без кофеина из\u00A0Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня",
+    description:"Свежесваренный кофе без кофеина из\u00A0Эфиопии с\u00A0натуральным фермерским молоком — то, что нужно для\u00A0расслабления после тяжёлого рабочего дня",
     oldPrice:"295₽",
     price:"225₽",
     color:'beige',

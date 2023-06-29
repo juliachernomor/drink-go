@@ -1,36 +1,66 @@
 @use "../mixins" as m;
 @use "../variables" as v;
 
+.swiper{
+  position: relative;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
  display: none;
 }
 
-.container-slider .swiper-button-prev{
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 10px;
+  background-color: v.$base-white;
+  border-radius:0;
+}
+.swiper-pagination-bullet-active {
+  background-color: #f00;
+}
+
+.my-swiper-pagination {
+  width: 62px;
+  height: 24px;
+  mask-image: url("/img/icons/stack.svg#slider-step");
+  background-color:v.$base-white;
+  background-repeat: no-repeat;
+  background-size: 62px 10px;
+  background-position: center;
+}
+
+.my-swiper-prev{
   position: absolute;
   content:"";
   top:50%;
   left:0;
-  background-image: url("/img/icons/stack.svg#left-row");
+  mask-image: url("/img/icons/stack.svg#left-row");
+  background-color:  v.$purple-dark;
   background-repeat: no-repeat;
   background-size: 11px 20px;
-  width: 11px;
-  height: 20px;
+  width: 20px;
+  height: 694px;
+  z-index: 22;
 }
-.container-slider .swiper-button-next{
+
+.my-swiper-next{
   position: absolute;
   content:"";
   top:50%;
-  left:280px;
-  background-image: url("/img/icons/stack.svg#left-row");
+  left:0px;
+  mask-image: url("/img/icons/stack.svg#left-row");
   transform: rotate(180deg);
+  background-color:  v.$purple-dark;
   background-repeat: no-repeat;
   background-size: 11px 20px;
-  width: 11px;
-  height: 20px;
+  padding: 10px;
+  width: 20px;
+  height: 694px;
+  z-index: 22;
 }
 
-@media (max-width: v.$mobile-width-only) {
+@media (max-width: v.$tablet-width-only) {
  .swiper-pagination {
   display: none;
  }

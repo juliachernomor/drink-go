@@ -1,33 +1,40 @@
 @use "../mixins" as m;
 @use "../variables" as v;
-.container{
-  overflow: hidden;
-  min-width: 320px;
-}
 
-.container__wrapper{
+
+.container__slider{
   width: 320px;
   padding: 0 20px;
-  box-sizing: border-box;
   margin: 0 auto;
+  box-sizing: border-box;
   min-height: 656px;
+
+  @media(min-width: v.$tablet-width){
+    width: 768px;
+    padding: 0 60px;
+    min-height: 828px;
+  }
+
+  @media(min-width: v.$desktop-width){
+    width: 1440px;
+    padding: 0 60px;
+    min-height: 714px;
+  }
 }
 
 .container__advantages {
-  display: block;
   width: 320px;
   padding: 0 20px;
-  box-sizing: border-box;
   margin: 0 auto;
+  box-sizing: border-box;
   min-height: 902px;
 }
 
 .container__filter {
-  display: block;
   width: 320px;
   padding: 0 20px;
-  box-sizing: border-box;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .container__map{
@@ -35,10 +42,3 @@
   height: 420px;
 }
 
-.container__footer {
-  display: block;
-  width: 320px;
-  padding: 0 20px ;
-  box-sizing: border-box;
-  margin: 0 auto;
-}

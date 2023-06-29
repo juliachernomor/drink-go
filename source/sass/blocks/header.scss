@@ -1,24 +1,78 @@
 @use "../variables" as v;
 
-  .header {
-    background-color: v.$base-white;
-  }
-
   .header__logo-wrapper {
     position: absolute;
     content:"";
-    top:0;
+    top: 0;
     left: 0;
     display: flex;
     align-items: center;
     width: 32px;
     min-height: 60px;
-    margin-top: auto;
-    margin-left: 20px;
+    margin: 0 0 0 20px;
+
+    @media(min-width: v.$tablet-width){
+      width: 82px;
+      height: 36px;
+      top: 22px;
+      min-height: 36px;
+      margin: 0 0 0 20px;
+      z-index: 777;
+    }
+
+    @media(min-width: v.$desktop-width){
+      width: 316px;
+      margin: 0 0 0 40px;
+      justify-content: space-between;
+    }
   }
 
-  @media (max-width: v.$mobile-width-only) {
+  @media (max-width: v.$tablet-width-only){
     .header__logo-description {
       display: none;
     }
   }
+
+  @media (min-width: v.$desktop-width){
+    .header__logo-description {
+      display: block;
+      width: 126px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+
+  @media(min-width: v.$tablet-width){
+    .header__logo-image{
+      width: 82px;
+      height: 36px;
+    }
+  }
+
+  @media(min-width: v.$desktop-width){
+    .header__logo-image{
+      width: 170px;
+      margin: 0;
+    }
+  }
+
+
+  .header__nav{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:end;
+    width: 280px;
+
+    @media(min-width: v.$tablet-width){
+      justify-content:space-between;
+      width: 580px;
+    }
+
+    @media(min-width: v.$desktop-width){
+      width: 880px;
+      letter-spacing: 0.1px;
+    }
+  }
+

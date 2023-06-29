@@ -3,15 +3,10 @@
 
 .banner-slider__wrapper{
   width: 100%;
-
 }
 .banner-slider__slider-item{
   @include m.list-rules-reset;
   width: 100%;
-}
-
-.banner-slider{
-  position: relative;
 }
 
 

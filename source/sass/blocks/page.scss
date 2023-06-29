@@ -1,6 +1,5 @@
 @use "../variables" as v;
 @use "../mixins" as m;
-@use "../fonts" as *;
 
 .page {
   @include m.intends-reset;
@@ -8,25 +7,27 @@
   width: 100%;
   margin: 0  auto;
   font-family: "Montserrat", "Arial", sans-serif;
-  color: v.$base-black;
-
+  overflow: hidden;
 }
 
 .page__body {
   @include m.intends-reset;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   min-height: 100%;
+  width: 100%;
   min-width: 320px;
-  margin:  auto;
-  overflow-x: hidden;
+  background-color: v.$base-white;
+  color: v.$base-black;
+  overflow: hidden;
+
+  @media(min-width: v.$tablet-width){
+    min-width: 768px;
+  }
 }
 
 .page__header{
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   display: flex;
   justify-content: start;
@@ -35,11 +36,50 @@
   margin: 0 auto;
   box-sizing: border-box;
   min-height: 60px;
+
+
+  @media(min-width: v.$tablet-width){
+    width: 768px;
+    justify-content: end;
+  }
+
+  @media(min-width: v.$desktop-width){
+    width: 1440px;
+    padding: 0 40px;
+    }
+  }
+
+.page__container{
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+
+
+  @media(min-width: v.$tablet-width){
+    min-width: 768px;
+  }
+
+  @media(min-width: v.$desktop-width){
+    width: 1440px;
+    }
 }
 
-.page__nav{
-  position: relative;
-  display: flex;
-  justify-content: end;
-  width: 280px;
+.page__footer {
+  display: block;
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @media(min-width: v.$tablet-width){
+    min-width: 768px;
+  }
+
+  @media(min-width: v.$desktop-width){
+    width: 1440px;
+    }
 }
+
+
