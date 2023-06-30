@@ -7,10 +7,10 @@
     font-weight: 700;
     line-height: 20px;
     letter-spacing: 0.3px;
+    color:v.$purple-dark
 }
 
 .contacts__wrapper{
-  position: relative;
   display: grid;
   grid-template-columns: 13px 261px;
   gap: 16px 6px ;
@@ -19,40 +19,33 @@
   text-align: left;
 }
 
-.contacts__wrapper::after{
-  position: absolute;
-  content: "";
-  grid-column: 1/2;
-  grid-row: 1/2;
-  background-color: url("/img/icons/stack.svg#adress");
-  background-size: 13px 16px;
-  background-repeat: no-repeat;
-  width: 13px;
-  height: 16px;
-}
-
-.contacts__wrapper::before{
-  position: absolute;
-  content: "";
-  grid-column: 1/2;
-  grid-row: 2/3;
-  background-color: url("/img/icons/stack.svg#phone");
-  background-size: 13px 16px;
-  background-repeat: no-repeat;
-  width: 13px;
-  height: 16px;
-}
-
 .contacts__text{
+  width: 261px;
+  height: 40px;
+  position: relative;
   padding: 0;
   margin: 0;
   grid-column: 2/3;
   grid-row: 1/2;
 }
 
+  @media (max-width: v.$mobile-width-only){
+  br {
+    display: none;
+  }
+
+
+  @media (min-width: v.$desktop-width){
+    br {
+      display: none;
+    }
+}
+  }
+
 .contacts__phone {
+  position: relative;
   grid-column: 2/3;
   grid-row: 2/3;
   color:v.$base-black;
   text-decoration: none;
-}
+  }

@@ -3,7 +3,6 @@ import { createSliderCard } from './slider-card.js';
 import {sliderCard} from './mocks.js'
 import {card} from './mocks.js';
 import {effectMenu} from './menu.js';
-
 import './map.js';
 
 
@@ -11,7 +10,6 @@ import './map.js';
 createCard(card);
 createSliderCard(sliderCard);
 effectMenu();
-
 new Swiper('.swiper', {
   navigation: {
     nextEl:'.my-swiper-prev',
@@ -27,8 +25,6 @@ new Swiper('.swiper', {
     clickable:true,
   },
 });
-
-
 
 
 

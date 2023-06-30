@@ -10,15 +10,18 @@
     display: flex;
     justify-content: end;
 }
+}
 @media(min-width: v.$desktop-width){
   sort::after{
     position:absolute;
     content:"";
     top:500px;
     left:0;
+    width: 280px;
+    height: 100px;
   }
   }
-}
+
 
 .sort__title {
   max-width: 107px;

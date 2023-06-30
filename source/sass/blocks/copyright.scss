@@ -1,6 +1,7 @@
 @use "../mixins" as m;
 @use "../variables" as v;
 
+
 .copyright__link{
   display: block;
   text-align: center;
@@ -8,5 +9,13 @@
   text-decoration: none;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 12px;
-line-height: 16px;
+  line-height: 16px;
+}
+
+@media(min-width: v.$tablet-width){
+  .copyright {
+    padding-top: 0;
+
+  }
+
 }

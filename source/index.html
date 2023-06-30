@@ -20,6 +20,7 @@
   <link rel="preload" href="fonts/montserrat/montserrat-bold.woff2" as="style">
   <link rel="preload" href="fonts/montserrat/montserrat-bold.woff" as="style">
 </head>
+
 <body class="page__body">
   <header class="page__header header">
     <div class="header__logo-wrapper">
@@ -50,7 +51,7 @@
       </ul>
       <ul class="nav__list nav__site-list site-list">
         <li class="site-list__item site-list__item--main site-list__item--current">
-          <span class="site-list__link">
+          <span class="site-list__link site-list__link--current">
             Главная
           </span>
         </li>
@@ -84,7 +85,7 @@
       <div class="banner-slider__toggles my-swiper-pagination swiper-pagination"></div>
       <div class="banner-slider__button-prev-wrapper my-swiper-prev swiper-button-prev"></div>
       <div class="banner-slider__button-next-wrapper my-swiper-next swiper-button-next"></div>
-      </section>
+    </section>
 
     <section class="container__advantages advantages">
       <span class="advantages__feature">Преимущества</span>
@@ -115,7 +116,6 @@
           </p>
         </li>
       </ul>
-      </div>
     </section>
 
     <section class="container__filter filter">
@@ -123,128 +123,136 @@
       <span class="filter__feature">Каталог</span>
       <h2 class="filter__title">Каталог кофейных напитков</h2>
       <div class="filter__wrapper">
-      <form class="filter__form form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__fieldset fieldset range">
-          <legend class="range__title">Цена</legend>
-          <div class="range-scale">
-            <div class="range-bar">
-              <button class="range-toggle range-toggle__toggle-min" type="button"><span class="visually-hidden">Изменить минимальную
-                  цену.</span></button>
-              <button class="range-toggle range-toggle__toggle-max" type="button"><span class="visually-hidden">Изменить
-                  максимальную цену.</span></button>
+        <form class="filter__form form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__fieldset fieldset range">
+            <legend class="range__title">Цена</legend>
+            <div class="range-scale">
+              <div class="range-bar">
+                <button class="range-toggle range-toggle__toggle-min" type="button"><span
+                    class="visually-hidden">Изменить минимальную
+                    цену.</span></button>
+                <button class="range-toggle range-toggle__toggle-max" type="button"><span
+                    class="visually-hidden">Изменить
+                    максимальную цену.</span></button>
+              </div>
             </div>
-          </div>
-          <div class="range__wrapper">
-            <input class="range__search" type="text" name="from" placeholder="0"  required>
-            <input class="range__search" type="text" name="to" placeholder="123" required>
-          </div>
-        </fieldset>
-        <fieldset class="form__fieldset fieldset radio">
-          <legend class="radio__title">Наличие молока</legend>
-          <ul class="radio__list">
-            <li class="radio__item radio-point">
-              <label class="radio-point__label">
-                <input class="radio-point__input visually-hidden" type="radio" name="milk" value="Неважно" checked>
-                <span class="radio-point__control-mark"></span>
-                <span class="radio-point__control-label">Неважно</span>
-              </label>
-            </li>
-            <li class="radio__item radio-point">
-              <label class="radio-point__label ">
-                <input class="radio-point__input visually-hidden" type="radio" name="milk" value="Только животное">
-                <span class="radio-point__control-mark"></span>
-                <span class="radio-point__control-label">Только животное</span>
-              </label>
-            </li>
-            <li class="radio__item radio-point">
-              <label class="radio-point__label ">
-                <input class="radio-point__input visually-hidden" type="radio" name="milk" value="Только растительное">
-                <span class="radio-point__control-mark"></span>
-                <span class="radio-point__control-label">Только растительное</span>
-              </label>
-            </li>
-            <li class="radio__item radio-point">
-              <label class="radio-point__label">
-                <input class="radio-point__input visually-hidden" type="radio" name="milk" value="Без молока"  disabled>
-                <span class="radio-point__control-mark"></span>
-                <span class="radio-point__control-label">Без молока</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__fieldset fieldset checkbox">
-          <legend class="checkbox__title">Страна произрастания</legend>
-          <ul class="checkbox__list">
-            <li class="checkbox__item checkbox-point">
-              <label class="checkbox-point__label">
-                <input class="checkbox-point__control-mark" type="checkbox" name="brazil" checked>
-                <span class="checkbox-point__control-label">Бразилия</span>
-              </label>
-            </li>
-            <li class="checkbox__item checkbox-point">
-              <label class="checkbox-point__label">
-                <input class="checkbox-point__control-mark" type="checkbox" name="efiopia">
-                <span class="checkbox-point__control-label">Эфиопия</span>
-              </label>
-            </li>
-            <li class="checkbox__item checkbox-point">
-              <label class="checkbox-point__label">
-                <input class="checkbox-point__control-mark" type="checkbox" name="colambia">
-                <span class="checkbox-point__control-label">Колумбия</span>
-              </label>
-            </li>
-            <li class="checkbox__item checkbox-point">
-              <label class="checkbox-point__label">
-                <input class="checkbox-point__control-mark" type="checkbox" name="costa-rika">
-                <span class="checkbox-point__control-label">Коста-Рика</span>
-              </label>
-            </li>
-            <li class="checkbox-point checkbox">
-              <label class="checkbox-point__label">
-                <input class="checkbox-point__control-mark" type="checkbox" name="pery" disabled>
-                <span class="checkbox-point__control-label">Перу</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__fieldset fieldset fieldset-button">
-          <legend class="fieldset-button__title"><span class="visually-hidden"> Применить настройки</span></legend>
-          <button class="fieldset-button__apply fieldset-button__apply--color button " type="submit" name="apply">Применить</button><br>
-          <button class="fieldset-button__reset fieldset-button__reset--color
+            <div class="range__wrapper">
+              <input class="range__search" type="text" name="from" placeholder="0" required>
+              <input class="range__search" type="text" name="to" placeholder="123" required>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset radio">
+            <legend class="radio__title">Наличие молока</legend>
+            <ul class="radio__list">
+              <li class="radio__item radio-point">
+                <label class="radio-point__label">
+                  <input class="radio-point__input visually-hidden" type="radio" name="milk" value="Неважно" checked>
+                  <span class="radio-point__control-mark"></span>
+                  <span class="radio-point__control-label">Неважно</span>
+                </label>
+              </li>
+              <li class="radio__item radio-point">
+                <label class="radio-point__label ">
+                  <input class="radio-point__input visually-hidden" type="radio" name="milk" value="Только животное">
+                  <span class="radio-point__control-mark"></span>
+                  <span class="radio-point__control-label">Только животное</span>
+                </label>
+              </li>
+              <li class="radio__item radio-point">
+                <label class="radio-point__label ">
+                  <input class="radio-point__input visually-hidden" type="radio" name="milk"
+                    value="Только растительное">
+                  <span class="radio-point__control-mark"></span>
+                  <span class="radio-point__control-label">Только растительное</span>
+                </label>
+              </li>
+              <li class="radio__item radio-point">
+                <label class="radio-point__label">
+                  <input class="radio-point__input visually-hidden" type="radio" name="milk" value="Без молока"
+                    disabled>
+                  <span class="radio-point__control-mark"></span>
+                  <span class="radio-point__control-label">Без молока</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset checkbox">
+            <legend class="checkbox__title">Страна произрастания</legend>
+            <ul class="checkbox__list">
+              <li class="checkbox__item checkbox-point">
+                <label class="checkbox-point__label">
+                  <input class="checkbox-point__control-mark" type="checkbox" name="brazil" checked>
+                  <span class="checkbox-point__control-label">Бразилия</span>
+                </label>
+              </li>
+              <li class="checkbox__item checkbox-point">
+                <label class="checkbox-point__label">
+                  <input class="checkbox-point__control-mark" type="checkbox" name="efiopia">
+                  <span class="checkbox-point__control-label">Эфиопия</span>
+                </label>
+              </li>
+              <li class="checkbox__item checkbox-point">
+                <label class="checkbox-point__label">
+                  <input class="checkbox-point__control-mark" type="checkbox" name="colambia">
+                  <span class="checkbox-point__control-label">Колумбия</span>
+                </label>
+              </li>
+              <li class="checkbox__item checkbox-point">
+                <label class="checkbox-point__label">
+                  <input class="checkbox-point__control-mark" type="checkbox" name="costa-rika">
+                  <span class="checkbox-point__control-label">Коста-Рика</span>
+                </label>
+              </li>
+              <li class="checkbox-point checkbox">
+                <label class="checkbox-point__label">
+                  <input class="checkbox-point__control-mark" type="checkbox" name="pery" disabled>
+                  <span class="checkbox-point__control-label">Перу</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__fieldset fieldset fieldset-button">
+            <legend class="fieldset-button__title"><span class="visually-hidden"> Применить настройки</span></legend>
+            <button class="fieldset-button__apply fieldset-button__apply--color button " type="submit"
+              name="apply">Применить</button><br>
+            <button class="fieldset-button__reset fieldset-button__reset--color
           fieldset-button__reset--margin button" type="submit" name="reset">Сбросить</button>
-        </fieldset>
+          </fieldset>
+        </form>
+      </div>
+      <div class="filter__cards cards">
+        <h2 class="visually-hidden">Карточки товаров</h2>
         <div class="form__fieldset fieldset sort">
           <legend class="sort__title">Сортировка</legend>
           <div>
-          <select class="sort__select" name="sort-select" aria-label="Сортировка.">
-            <option value="cheap" selected>по умолчанию</option>
-            <option value="expensive">сначала дорогие</option>
-            <option value="popular">сначала дешевые</option>
-            <option value="popular">высокий рейтинг</option>
-          </select>
+            <select class="sort__select" name="sort-select" aria-label="Сортировка.">
+              <option value="cheap" selected>по умолчанию</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="popular">сначала дешевые</option>
+              <option value="popular">высокий рейтинг</option>
+            </select>
+          </div>
         </div>
-        </div>
-      </form>
-    </div>
-    <div class="filter__cards cards">
-      <h2 class="visually-hidden">Карточки товаров</h2>
-      <ul class="cards__list">
+        <ul class="cards__list">
 
-        <!--здесь подключаются карточки товаров-->
+          <!--здесь подключаются карточки товаров-->
 
-      </ul>
-    </div>
-    <div class="filter__pagination pagination">
-      <h2 class="visually-hidden">Пагинация</h2>
-      <ul class="pagination__list">
-        <li class="pagination__item"><a class="pagination__link pagination__link-prev"><span class="pagination__row">Назад</span></a></li>
-        <li class="pagination__item"><a class="pagination__link " href="#">1</a></li>
-        <li class="pagination__item"><span class=" pagination__link pagination__current-page" aria-current="page">2</span></li>
-        <li class="pagination__item"><a class="pagination__link " href="#">3</a></li>
-        <li class="pagination-item"><a class="pagination__link pagination__link-next"><span class="pagination__row">Вперед</span></a>
-        </li>
-      </ul>
-    </div>
+        </ul>
+      </div>
+      <div class="filter__pagination pagination">
+        <h2 class="visually-hidden">Пагинация</h2>
+        <ul class="pagination__list">
+          <li class="pagination__item"><a class="pagination__link pagination__link-prev"><span
+                class="pagination__row">Назад</span></a></li>
+          <li class="pagination__item"><a class="pagination__link " href="#">1</a></li>
+          <li class="pagination__item"><span class=" pagination__link pagination__current-page"
+              aria-current="page">2</span></li>
+          <li class="pagination__item"><a class="pagination__link " href="#">3</a></li>
+          <li class="pagination-item"><a class="pagination__link pagination__link-next"><span
+                class="pagination__row">Вперед</span></a>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="container__map map">
       <h2 class="visually-hidden">Схема проезда</h2>
@@ -267,7 +275,7 @@
       <h2 class="visually-hidden">Социальные сети</h2>
       <a class="footer__logo-image" href="#">
         <picture>
-          <source media="(min-width: 768px) and (min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/logo-desktop.svg" width="170" height="36">
           <img class="footer__logo-picture" src="img/svg/logo-tablet.svg" width="82" height="36" alt="Интернет-магазин">
         </picture>
       </a>
@@ -349,9 +357,9 @@
       <div class="about-us__contacts contacts">
         <h3 class="contacts__title">Контакты</h3>
         <div class="contacts__wrapper">
-        <p class="contacts__text">
-          Санкт-Петербург, набережная реки Карповки, дом 5
-        </p>
+          <p class="contacts__text">
+            Санкт-Петербург,<br> набережная реки<br> Карповки, дом 5
+          </p>
           <a class="contacts__phone" href="tel:+79999999999">
             <span class="contacts__phone-text"></span> +7 (999) 999-99-99
           </a>
@@ -365,7 +373,6 @@
           <use href="img/icons/stack.svg#html-logo"></use>
         </svg>
       </a>
-      </div>
     </section>
   </footer>
 
@@ -395,6 +402,7 @@
           <button class="product-description__button product-description__button--fonts button">Заказать</button>
         </div>
       </div>
+    </div>
   </template>
 
   <!--шаблон карточки товаров-->
@@ -412,16 +420,15 @@
       <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
       <div class="card__wrapper">
         <span class="card__price">225₽</span>
-        <a class="card__order button button--font" href="#"><span class="card__order-button-picture"><svg role="img" width="20" height="16">
-          <use href="img/icons/stack.svg#union-plus"></use>
-        </svg></span><span class="card__order-button-text">В&nbsp;корзину</span></a>
+        <a class="card__order button button--font" href="#"><span class="card__order-button-picture"><svg role="img"
+              width="20" height="16">
+              <use href="img/icons/stack.svg#union-plus"></use>
+            </svg></span><span class="card__order-button-text">В&nbsp;корзину</span></a>
       </div>
     </li>
   </template>
-
   <script src="js/script.js" type="module"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>
 </body>
-
 </html>

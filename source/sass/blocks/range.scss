@@ -1,7 +1,6 @@
 @use "../variables" as v;
 @use "../mixins" as m;
 
-
 .range {
   font-family: "Montserrat", "Arial", sans-serif;
   text-align: start;
@@ -35,6 +34,10 @@
     width: 223px;
     margin: 0 0 31px 0;
   }
+
+  @media(min-width: v.$desktop-width){
+    width: 318px;
+  }
 }
 
 .range-bar {
@@ -47,6 +50,10 @@
 
   @media(min-width: v.$tablet-width){
     width: 180px;
+  }
+
+  @media(min-width: v.$desktop-width){
+    width: 274px;
   }
 }
 
@@ -104,22 +111,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 0 30px 0;
-}
 
-@media(max-width: v.$mobile-width-only){
-.range__search {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  min-width: 118px;
-  background-color: v.$base-white;
-  color: v.$base-black;
-  border-radius: 4px;
-  box-sizing: border-box;
-  border: 2px solid v.$purple-lighter;
-  padding: 8px 9px 8px 9px;
-  cursor: pointer;
+  @media(min-width: v.$desktop-width){
+    margin: 0 0 25px 0;
 }
 }
 
@@ -136,10 +130,46 @@
   border-radius: 4px;
   box-sizing: border-box;
   border: 2px solid v.$purple-lighter;
-  padding: 8px 10px 8px 10px;
   cursor: pointer;
 }
 }
+
+@media(max-width: v.$mobile-width-only){
+.range__search {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  max-width: 118px;
+  background-color: v.$base-white;
+  color: v.$base-black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 2px solid v.$purple-lighter;
+  padding: 8px 9px 8px 9px;
+  cursor: pointer;
+}
+}
+
+
+
+@media(min-width: v.$desktop-width){
+  .range__search {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    min-width: 130px;
+    background-color: v.$base-white;
+    color: v.$base-black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid v.$purple-lighter;
+    padding: 8px 9px 8px 9px;
+    cursor: pointer;
+  }
+}
+
 
 
 

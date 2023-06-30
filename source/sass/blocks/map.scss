@@ -1,3 +1,6 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
 .map {
   display: grid;
   grid-template-columns: 1fr;
@@ -5,6 +8,17 @@
   width: 100%;
   max-height: 420px;
   margin: 0 auto;
+
+  @media(min-width: v.$tablet-width){
+    height: 480px;
+    max-height: 480px;
+}
+
+@media(min-width: v.$desktop-width){
+  height: 540px;
+  max-height: 540px;
+  margin-bottom: 84px;
+}
 }
 
 .map__link{
@@ -12,6 +26,16 @@
   max-height: 420px;
   grid-column: 1/2;
   grid-row: 1/2;
+
+  @media(min-width: v.$tablet-width){
+    height: 480px;
+    max-height: 480px;
+}
+
+@media(min-width: v.$desktop-width){
+  height: 540px;
+  max-height: 540px;
+}
 }
 
 .map__link::after{
@@ -32,6 +56,16 @@
   object-fit: cover;
   display: block;
   margin: 0 auto;
+
+  @media(min-width: v.$tablet-width){
+    height: 480px;
+    max-height: 480px;
+}
+
+@media(min-width: v.$desktop-width){
+  height: 540px;
+  max-height: 540px;
+}
 }
 
 .map__interactive-map {
@@ -43,18 +77,35 @@
   max-height: 420px;
   margin: 0 auto;
   z-index: 2;
+
+  @media(min-width: v.$tablet-width){
+    height: 480px;
+    max-height: 480px;
 }
 
 
-
-
-.map__interactive-map--nojs {
-  display: none;
+@media(min-width: v.$desktop-width){
+  height: 540px;
+  max-height: 540px;
+}
 }
 
 #map {
   height: 420px;
   min-width: 320px;
+
+
+  @media(min-width: v.$tablet-width){
+    height: 480px;
+  }
+
+
+  @media(min-width: v.$desktop-width){
+    height: 540px;
+    max-height: 540px;
 }
+}
+
+
 
 

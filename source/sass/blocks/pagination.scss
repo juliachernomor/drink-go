@@ -13,9 +13,12 @@ margin: 0;
 }
 
 @media(min-width: v.$desktop-width){
+  min-width: 1360px;
   grid-column: 1/3;
+  display: flex;
+  justify-content: end;
     grid-row: 4/5;
-    padding: 60px 0 120px 0;
+    padding: 60px 0 119px 0;
 }
 }
 

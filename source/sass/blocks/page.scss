@@ -76,10 +76,15 @@
 
   @media(min-width: v.$tablet-width){
     min-width: 768px;
+    padding: 0 20px 0 16px;
   }
 
   @media(min-width: v.$desktop-width){
     width: 1440px;
+    padding: 0  40px 0 38px;
+    display: grid;
+    grid-template-columns: 318px 952px;
+    grid-gap: 30px ;
     }
 }
 

@@ -47,16 +47,6 @@
   margin: 0 auto;
   box-sizing: border-box;
 
-  &::after {
-    position: absolute;
-    content:"";
-    top:1558px;
-    left: -1000%;
-    width:100000%;
-    height:100%;
-background-color: v.$dark-white;
-z-index: -1;
-  }
 
   @media(min-width: v.$tablet-width){
     width: 768px;
@@ -66,15 +56,17 @@ z-index: -1;
   @media(min-width: v.$desktop-width){
     position: relative;
     width: 1440px;
-    padding: 97px 41px 120px 40px;
+    padding: 97px 41px 0 38px;
     display: grid;
     grid-template-columns: 318px 1011px;
     column-gap:30px ;
   }
 }
 
+@media(min-width: v.$tablet-width){
 .container__map{
   min-width: 320px;
-  height: 420px;
+  height: 480px;
+}
 }
 
