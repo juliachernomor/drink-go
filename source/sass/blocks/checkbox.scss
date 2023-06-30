@@ -6,6 +6,11 @@
   font-family: "Montserrat", "Arial", sans-serif;
   color:v.$base-black;
   text-align: left;
+
+  @media(min-width: v.$desktop-width){
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
 }
 .checkbox__title {
   width: 280px;
@@ -19,6 +24,10 @@
   padding: 0;
   margin: 0;
   margin-bottom: 30px ;
+
+  @media (max-width: v.$tablet-width){
+    margin-bottom: 0;
+}
 }
 
 

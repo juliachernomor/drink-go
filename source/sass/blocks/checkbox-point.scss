@@ -16,6 +16,15 @@
   margin:0 0 20px 54px;
 }
 
+
+@media(min-width: v.$tablet-width){
+.checkbox > .checkbox-point__control-label:not(:last-child),
+.checkbox > .checkbox-point__control-mark:not(:last-child){
+  margin-bottom: 20px;
+
+}}
+
+
 .checkbox-point__label{
   width: 100%;
 }

@@ -5,6 +5,19 @@
   min-height: 40px;
   box-sizing: border-box;
   font-family: "Montserrat", "Arial", sans-serif;
+
+
+  @media (max-width: v.$tablet-width){
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: start;
+  }
+
+  @media(min-width: v.$desktop-width){
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
 }
 
 .fieldset-button__title {
@@ -15,6 +28,24 @@
 .fieldset-button__reset {
   margin-left:2px;
   width: 280px;
+}
+
+@media (max-width: v.$tablet-width){
+.fieldset-button__apply{
+  max-width: 137px;
+    display: flex;
+    min-height: 40px ;
+    flex-shrink: 1;
+    margin: 19px 20px 45px 227px;
+  }
+}
+
+
+@media (max-width: v.$tablet-width){
+.fieldset-button__reset {
+  margin-top: 19px;
+  max-width: 120px;
+}
 }
 
 .fieldset-button__apply--color {

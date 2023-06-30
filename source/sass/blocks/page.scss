@@ -7,7 +7,7 @@
   width: 100%;
   margin: 0  auto;
   font-family: "Montserrat", "Arial", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .page__body {
@@ -51,6 +51,7 @@
 
 .page__container{
   position: relative;
+  margin: 0 auto;
   width: 100%;
   min-height: 100%;
 

@@ -1,8 +1,23 @@
 @use "../variables" as v;
 @use "../mixins" as m;
+
 .sort {
   display: flex;
   font-family: "Montserrat", "Arial", sans-serif;
+
+  @media(min-width: v.$tablet-width){
+    grid-column: 1/4;
+    display: flex;
+    justify-content: end;
+}
+@media(min-width: v.$desktop-width){
+  sort::after{
+    position:absolute;
+    content:"";
+    top:500px;
+    left:0;
+  }
+  }
 }
 
 .sort__title {

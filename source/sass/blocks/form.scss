@@ -1,7 +1,9 @@
 @use "../mixins" as m;
 @use "../variables" as v;
 
+
+
 .form__fieldset {
   @include m.intends-reset;
-  width: 280px;
 }
+

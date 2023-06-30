@@ -27,7 +27,18 @@
   padding: 0 20px;
   margin: 0 auto;
   box-sizing: border-box;
-  min-height: 902px;
+
+  @media(min-width: v.$tablet-width){
+    width: 768px;
+    padding: 0 30px 0 25px;
+  }
+
+  @media(min-width: v.$desktop-width){
+    width: 1440px;
+    padding: 0 40px 0 35px;
+    min-height: 554px;
+
+  }
 }
 
 .container__filter {
@@ -35,6 +46,31 @@
   padding: 0 20px;
   margin: 0 auto;
   box-sizing: border-box;
+
+  &::after {
+    position: absolute;
+    content:"";
+    top:1558px;
+    left: -1000%;
+    width:100000%;
+    height:100%;
+background-color: v.$dark-white;
+z-index: -1;
+  }
+
+  @media(min-width: v.$tablet-width){
+    width: 768px;
+    padding: 80px 20px 0 15px;
+  }
+
+  @media(min-width: v.$desktop-width){
+    position: relative;
+    width: 1440px;
+    padding: 97px 41px 120px 40px;
+    display: grid;
+    grid-template-columns: 318px 1011px;
+    column-gap:30px ;
+  }
 }
 
 .container__map{

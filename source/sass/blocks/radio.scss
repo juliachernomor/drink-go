@@ -1,10 +1,17 @@
 @use "../mixins" as m;
 @use "../variables" as v;
+
 .radio {
   width: 280px;
   font-family: "Montserrat", "Arial", sans-serif;
   color:v.$base-black;
   text-align: left;
+
+
+  @media(min-width: v.$desktop-width){
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
 }
 
 .radio__title {

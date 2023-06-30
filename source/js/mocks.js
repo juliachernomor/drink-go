@@ -69,7 +69,7 @@ export const sliderCard = [
     srcsetWebp768:"img/espresso-tablet.webp 1x,img/espresso-tablet@2x.webp 2x",
     srcsetWebp1440:"img/espresso-desktop.webp 1x,img/espresso-desktop@2x.webp 2x",
     title:"Тройной Эспрессо",
-    description:"Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость",
+    description:"Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что\u00A0такое настоящая бодрость",
     oldPrice:"395₽",
     price:"375₽",
     color:'gray',

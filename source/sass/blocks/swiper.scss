@@ -6,7 +6,8 @@
 }
 
 .swiper-button-prev::after,
-.swiper-button-next::after {
+.swiper-button-next::after,
+.swiper-pagination {
  display: none;
 }
 
@@ -16,9 +17,7 @@
   background-color: v.$base-white;
   border-radius:0;
 }
-.swiper-pagination-bullet-active {
-  background-color: #f00;
-}
+
 
 .my-swiper-pagination {
   width: 62px;
@@ -31,33 +30,22 @@
 }
 
 .my-swiper-prev{
-  position: absolute;
-  content:"";
-  top:50%;
-  left:0;
   mask-image: url("/img/icons/stack.svg#left-row");
   background-color:  v.$purple-dark;
   background-repeat: no-repeat;
   background-size: 11px 20px;
   width: 20px;
   height: 694px;
-  z-index: 22;
 }
 
 .my-swiper-next{
-  position: absolute;
-  content:"";
-  top:50%;
-  left:0px;
   mask-image: url("/img/icons/stack.svg#left-row");
   transform: rotate(180deg);
   background-color:  v.$purple-dark;
   background-repeat: no-repeat;
   background-size: 11px 20px;
-  padding: 10px;
   width: 20px;
   height: 694px;
-  z-index: 22;
 }
 
 @media (max-width: v.$tablet-width-only) {
