@@ -3,7 +3,7 @@ name: Project check
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
       - '*'
