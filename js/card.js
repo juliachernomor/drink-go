@@ -1,0 +1,1 @@
+const cardList=document.querySelector(".cards__list"),template=document.querySelector("#card");export const createCard=e=>{for(let r=0;r<e.length;r++){const t=template.content.cloneNode(!0);t.querySelector(".card__webp").srcset=e[r].srcsetWebp,t.querySelector(".card__png").src=e[r].src,t.querySelector(".card__png").srcset=e[r].srcsetJpg,cardList.append(t)}};
