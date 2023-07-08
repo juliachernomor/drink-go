@@ -13,7 +13,7 @@
 
 .radio-point__control-mark {
   position: absolute;
-  top: -2px;
+  top: 0;
   left: 1px;
   width: 24px;
   height: 24px;
@@ -25,7 +25,7 @@
 }
 
 .radio-point__input[type="radio"]:checked ~ .radio-point__control-mark {
-  border: 2px solid v.$purple-dark;
+  border: 2px solid $purple-dark;
 }
 
 .radio-point__input[type="radio"]:hover + .radio-point__control-mark::before,

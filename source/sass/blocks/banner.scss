@@ -6,3 +6,28 @@
   @include list-rules-reset;
   width: 100%;
 }
+
+@media (min-width: $tablet-width) {
+  .banner-slider__slider-item {
+    position: relative;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .banner-slider__slider-item::after {
+    position: absolute;
+    top: 645px;
+    left: 0;
+    content: "";
+    background-color: $base-white;
+    height: 188px;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner-slider__slider-item::after {
+    display: none;
+  }
+}

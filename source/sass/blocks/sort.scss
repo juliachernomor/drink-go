@@ -1,5 +1,5 @@
 .sort {
-  display: flex;
+  width: 280px;
   font-family: "Montserrat", "Arial", sans-serif;
 
   @media (min-width: $tablet-width) {
@@ -21,17 +21,20 @@
 }
 
 .sort__title {
-  max-width: 107px;
+  display: inline-block;
+  width: 107px;
+  text-align: left;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  margin: 0 10px 0 3px;
+  margin: 0;
   padding: 0;
 }
 
 .sort__select {
+  display: inline-block;
   margin: 0;
-  max-width: 165px;
+  width: 165px;
   box-sizing: border-box;
   padding: 4px 10px;
   border: none;

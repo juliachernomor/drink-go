@@ -26,6 +26,10 @@
     grid-column: 1/2;
     grid-row: 1/2;
     padding-top: 10px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 

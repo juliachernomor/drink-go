@@ -11,6 +11,7 @@ createCard(card);
 createSliderCard(sliderCard);
 effectMenu();
 new Swiper('.swiper', {
+  spaceBetween: 65,
   navigation: {
     nextEl:'.my-swiper-prev',
     prevEl:'.my-swiper-next',
