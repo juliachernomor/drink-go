@@ -41,7 +41,7 @@
   background-size: 16px 16px;
 }
 
-@media (max-width: v.$mobile-width-only) {
+@media (max-width: $mobile-width-only) {
   .nav--closed .nav__site-list {
     display: none;
   }
