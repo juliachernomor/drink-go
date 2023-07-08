@@ -81,7 +81,7 @@
         <!--начало шаблона для слайдера-->
         <template id="slider-card">
           <div class="banner-slider__slider-item slider-item swiper-slide">
-            <div class=" slider-item__image product-picture">
+            <div class="slider-item__image product-picture">
               <a href="#">
                 <picture>
                   <source class="product-picture__webp1440px" type="image/webp" media="(min-width: 1440px)" srcset="">
@@ -247,8 +247,9 @@
       <div class="filter__cards cards">
         <h2 class="visually-hidden">Карточки товаров</h2>
         <fieldset class="cards__fieldset fieldset sort">
-          <legend class="sort__title">Сортировка</legend>
-          <div>
+          <legend class="visually-hidden">Сортировка</legend>
+          <div class="sort__wrapper">
+            <h2 class ="sort__title">Сортировка</h2>
             <select class="sort__select" name="sort-select" aria-label="Сортировка.">
               <option value="cheap" selected>по умолчанию</option>
               <option value="expensive">сначала дорогие</option>
@@ -264,8 +265,7 @@
             <li class="cards__item card">
               <a href="#">
                 <picture>
-                  <source class="card__webp" type="image/webp"
-                    media="(min-width: 320px) and(min-width: 768px) and (max-width:1440px)" srcset="">
+                  <source class="card__webp" type="image/webp" media="(min-width: 2500px)" srcset="">
                   <img class="card__png" src="" srcset="" width="130" height="188" loading="lazy"
                     alt="Кофейный напиток Decaf Flat White">
                 </picture>
