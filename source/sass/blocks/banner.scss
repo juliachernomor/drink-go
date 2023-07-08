@@ -1,13 +1,8 @@
-@use "../mixins" as m;
-@use "../variables" as v;
-
-.banner-slider__wrapper{
-  width: 100%;
-}
-.banner-slider__slider-item{
-  @include m.list-rules-reset;
+.banner-slider__wrapper {
   width: 100%;
 }
 
-
-
+.banner-slider__slider-item {
+  @include list-rules-reset;
+  width: 100%;
+}

@@ -1,19 +1,16 @@
-@use "../mixins" as m;
-@use "../variables" as v;
 .card {
   font-family: "Montserrat", "Arial", sans-serif;
-  background-color: v.$base-white;
+  background-color: $base-white;
 
-  @media(min-width: v.$tablet-width){
-    min-height:440px ;
+  @media (min-width: $tablet-width) {
+    min-height: 440px;
     padding: 50px 30px 0 30px;
+  }
 
-    @media(min-width: v.$desktop-width){
-      min-height: 460px;
+  @media (min-width: $desktop-width) {
+    min-height: 460px;
+  }
 }
-}
-
-
 
 .card__title {
   margin: 20px 0 4px 0;
@@ -22,33 +19,34 @@
   font-weight: 700;
   line-height: 32px;
 
-  @media(min-width: v.$tablet-width){
-  font-size: 24px;
-  line-height: 36px;
-  margin: 26px 0 10px 0;
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 26px 0 10px 0;
   }
 
-@media(min-width: v.$desktop-width){
-  margin: 0 0 8px 0;
+  @media (min-width: $desktop-width) {
+    margin: 0 0 8px 0;
+  }
 }
-}
+
 .card__description {
   margin: 0 0 16px 0;
   font-size: 14px;
   line-height: 20px;
   text-align: left;
 
-  @media(min-width: v.$tablet-width){
-  font-size: 14px;
-font-weight: 400;
-line-height: 20px;
-margin: 0 0 19px 0;
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 0 19px 0;
   }
 
-  @media(min-width: v.$desktop-width){
+  @media (min-width: $desktop-width) {
     margin-bottom: 23px;
     font-size: 14px;
-}
+  }
 }
 
 .card__wrapper {
@@ -60,19 +58,16 @@ margin: 0 0 19px 0;
   column-gap: 20px;
   margin: 0 0 10px 0;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     min-width: 290px;
   }
 
-    @media(min-width: v.$desktop-width){
-      min-width: 250px;
-    }
-
-
-}
+  @media (min-width: $desktop-width) {
+    min-width: 250px;
+  }
 }
 
-.card__price{
+.card__price {
   text-align: left;
   width: 80px;
   font-size: 20px;
@@ -80,8 +75,8 @@ margin: 0 0 19px 0;
   line-height: 32px;
 }
 
-.card__order{
-flex: 1 0 auto;
+.card__order {
+  flex: 1 0 auto;
   max-width: 140px;
   justify-content: space-between;
   align-items: center;
@@ -89,21 +84,19 @@ flex: 1 0 auto;
   text-align: left;
 }
 
-.card__order-button-text{
+.card__order-button-text {
   max-height: 20px;
   font-size: 14px;
-  line-height: 20px
-
+  line-height: 20px;
 }
 
-.card__order-button-picture{
+.card__order-button-picture {
   height: 16px;
   margin-right: 5px;
 }
 
-@media(min-width: v.$desktop-width){
-.card__png{
-  margin-bottom: 27px;
+@media (min-width: $desktop-width) {
+  .card__png {
+    margin-bottom: 27px;
+  }
 }
-}
-

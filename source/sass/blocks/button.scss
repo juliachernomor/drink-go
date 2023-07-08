@@ -1,5 +1,3 @@
-@use "../variables" as v;
-
 .button {
   display: flex;
   justify-content: center;
@@ -9,10 +7,9 @@
   text-align: center;
   font-size: 16px;
   line-height: 24px;
-  text-align: center;
   border-radius: 4px;
-  color: v.$base-white;
-  background-color: v.$purple-dark;
+  color: $base-white;
+  background-color: $purple-dark;
   border: none;
   text-decoration: none;
   cursor: pointer;
@@ -20,16 +17,16 @@
 
 .button:hover,
 .button:focus {
-background-color: v.$purple-lighter;
-color: v.$base-white;
+  background-color: $purple-lighter;
+  color: $base-white;
 }
 
 .button:active {
-background-color:v.$purple-darker;
-color: v.$base-white;
+  background-color: $purple-darker;
+  color: $base-white;
 }
 
-.button:disable {
-  background-color:v.$gray-dark;
-  color: v.$base-white;
+.button:default {
+  background-color: $gray-dark;
+  color: $base-white;
 }

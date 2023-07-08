@@ -1,18 +1,15 @@
-@use "../variables" as v;
-@use "../mixins" as m;
-
 .product-picture__png {
   display: block;
   margin: auto;
   max-width: 100%;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     width: 476px;
     height: 476px;
     margin: auto;
   }
 
-  @media(min-width: v.$desktop-width){
+  @media (min-width: $desktop-width) {
     width: 600px;
     height: 600px;
     margin: auto;

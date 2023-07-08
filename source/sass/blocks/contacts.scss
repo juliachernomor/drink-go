@@ -1,25 +1,22 @@
-@use "../mixins" as m;
-@use "../variables" as v;
-
-.contacts__title{
-    margin: 20px 0 20px 0;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    color:v.$purple-dark
+.contacts__title {
+  margin: 20px 0 20px 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: $purple-dark;
 }
 
-.contacts__wrapper{
+.contacts__wrapper {
   display: grid;
   grid-template-columns: 13px 261px;
-  gap: 16px 6px ;
+  gap: 16px 6px;
   font-size: 14px;
   line-height: 20px;
   text-align: left;
 }
 
-.contacts__text{
+.contacts__text {
   width: 261px;
   height: 40px;
   position: relative;
@@ -29,23 +26,22 @@
   grid-row: 1/2;
 }
 
-  @media (max-width: v.$mobile-width-only){
+@media (max-width: $mobile-width-only) {
   br {
     display: none;
   }
-
-
-  @media (min-width: v.$desktop-width){
-    br {
-      display: none;
-    }
 }
+
+@media (min-width: $desktop-width) {
+  br {
+    display: none;
   }
+}
 
 .contacts__phone {
   position: relative;
   grid-column: 2/3;
   grid-row: 2/3;
-  color:v.$base-black;
+  color: $base-black;
   text-decoration: none;
-  }
+}

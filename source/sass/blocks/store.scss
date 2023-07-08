@@ -1,17 +1,14 @@
-@use "../mixins" as m;
-@use "../variables" as v;
-
-.store__title{
+.store__title {
   margin: 20px 0 20px 0;
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.3px;
-  color:v.$purple-dark;
+  color: $purple-dark;
 }
 
-.store__list{
-  @include m.list-rules-reset;
+.store__list {
+  @include list-rules-reset;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -19,15 +16,15 @@
   margin-bottom: 10px;
 }
 
-.store__list-item{
-font-size: 12px;
-font-weight: 500;
-line-height: 16px;
-font-family: "Montserrat", "Arial", sans-serif;
+.store__list-item {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  font-family: "Montserrat", "Arial", sans-serif;
 }
 
-.store__list-link{
-  color: v.$base-black;
+.store__list-link {
+  color: $base-black;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.3px;

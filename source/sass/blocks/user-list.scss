@@ -1,19 +1,17 @@
-@use "../variables" as v;
-
-@media (max-width: v.$tablet-width-only) {
-  .user-list__text{
+@media (max-width: $tablet-width-only) {
+  .user-list__text {
     display: none;
   }
 }
 
-@media (min-width: v.$desktop-width) {
-  .user-list__text{
-   margin-left: 10px;
+@media (min-width: $desktop-width) {
+  .user-list__text {
+    margin-left: 10px;
   }
 }
 
-  @media (max-width: v.$tablet-width-only) {
-    .user-list__item{
+@media (max-width: $tablet-width-only) {
+  .user-list__item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +20,7 @@
   }
 }
 
-@media (max-width: v.$mobile-width-only){
+@media (max-width: $mobile-width-only) {
   .user-list__item {
     display: flex;
     align-items: center;
@@ -32,13 +30,13 @@
   }
 }
 
-  @media (min-width: v.$desktop-width) {
-    .user-list__item {
+@media (min-width: $desktop-width) {
+  .user-list__item {
     display: flex;
-    flex:0 0 auto;
+    flex: 0 0 auto;
     column-gap: 20px;
     box-sizing: border-box;
-    color: v.$base-black;
+    color: $base-black;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
@@ -46,11 +44,11 @@
 
     &:hover,
     &:focus {
-      color: v.$purple-dark;
+      color: $purple-dark;
       outline: none;
+    }
   }
 }
-  }
 
 .user-list__login,
 .user-list__cart {
@@ -59,37 +57,34 @@
   padding: 22px;
   box-sizing: border-box;
 
-    @media (min-width: v.$tablet-width) {
+  @media (min-width: $tablet-width) {
     min-width: 60px;
     height: 80px;
     padding: 32px 22px;
   }
 }
 
-@media (min-width: v.$desktop-width) {
-  .user-list__login{
+@media (min-width: $desktop-width) {
+  .user-list__login {
     display: flex;
     align-items: center;
     margin: auto 0;
     min-width: 112px;
     height: 80px;
     padding: 32px 20px;
-    color: v.$base-black;
+    color: $base-black;
     text-decoration: none;
   }
 }
 
-@media (min-width: v.$desktop-width) {
-  .user-list__cart{
+@media (min-width: $desktop-width) {
+  .user-list__cart {
     display: flex;
     margin: 0 auto;
     min-width: 129px;
     height: 80px;
     padding: 32px 20px;
-    color: v.$base-black;
+    color: $base-black;
     text-decoration: none;
   }
-  }
-
-
-
+}

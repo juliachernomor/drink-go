@@ -1,55 +1,51 @@
-@use "../mixins" as m;
-@use "../variables" as v;
-
-.swiper{
+.swiper {
   position: relative;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after,
 .swiper-pagination {
- display: none;
+  display: none;
 }
 
 .swiper-pagination-bullet {
   width: 62px;
   height: 10px;
-  background-color: v.$base-white;
-  border-radius:0;
+  background-color: $base-white;
+  border-radius: 0;
 }
-
 
 .my-swiper-pagination {
   width: 62px;
   height: 24px;
   mask-image: url("/img/icons/stack.svg#slider-step");
-  background-color:v.$base-white;
+  background-color: $base-white;
   background-repeat: no-repeat;
   background-size: 62px 10px;
   background-position: center;
 }
 
-.my-swiper-prev{
+.my-swiper-prev {
   mask-image: url("/img/icons/stack.svg#left-row");
-  background-color:  v.$purple-dark;
+  background-color: $purple-dark;
   background-repeat: no-repeat;
   background-size: 11px 20px;
   width: 20px;
   height: 694px;
 }
 
-.my-swiper-next{
+.my-swiper-next {
   mask-image: url("/img/icons/stack.svg#left-row");
   transform: rotate(180deg);
-  background-color:  v.$purple-dark;
+  background-color: $purple-dark;
   background-repeat: no-repeat;
   background-size: 11px 20px;
   width: 20px;
   height: 694px;
 }
 
-@media (max-width: v.$tablet-width-only) {
- .swiper-pagination {
-  display: none;
- }
+@media (max-width: $tablet-width-only) {
+  .swiper-pagination {
+    display: none;
+  }
 }

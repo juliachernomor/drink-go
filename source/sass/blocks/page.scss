@@ -1,8 +1,5 @@
-@use "../variables" as v;
-@use "../mixins" as m;
-
 .page {
-  @include m.intends-reset;
+  @include intends-reset;
   min-height: 100%;
   width: 100%;
   margin: 0  auto;
@@ -11,23 +8,23 @@
 }
 
 .page__body {
-  @include m.intends-reset;
+  @include intends-reset;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   min-height: 100%;
   width: 100%;
   min-width: 320px;
-  background-color: v.$base-white;
-  color: v.$base-black;
+  background-color: $base-white;
+  color: $base-black;
   overflow: hidden;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     min-width: 768px;
   }
 }
 
-.page__header{
+.page__header {
   position: relative;
   display: flex;
   justify-content: start;
@@ -37,55 +34,50 @@
   box-sizing: border-box;
   min-height: 60px;
 
-
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     width: 768px;
     justify-content: end;
   }
 
-  @media(min-width: v.$desktop-width){
+  @media (min-width: $desktop-width) {
     width: 1440px;
     padding: 0 40px;
-    }
   }
+}
 
-.page__container{
+.page__container {
   position: relative;
   margin: 0 auto;
   width: 100%;
   min-height: 100%;
 
-
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     min-width: 768px;
   }
 
-  @media(min-width: v.$desktop-width){
+  @media (min-width: $desktop-width) {
     width: 1440px;
-    }
+  }
 }
 
 .page__footer {
   display: block;
   width: 320px;
   padding: 0 20px;
-  margin: 0 auto;
   box-sizing: border-box;
   margin: 0 auto;
   overflow: hidden;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     min-width: 768px;
     padding: 0 20px 0 16px;
   }
 
-  @media(min-width: v.$desktop-width){
+  @media (min-width: $desktop-width) {
     width: 1440px;
     padding: 0  40px 0 38px;
     display: grid;
     grid-template-columns: 318px 952px;
-    grid-gap: 30px ;
-    }
+    grid-gap: 30px;
+  }
 }
-
-

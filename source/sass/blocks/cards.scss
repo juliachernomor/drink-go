@@ -1,38 +1,38 @@
-@use "../mixins" as m;
-@use "../variables" as v;
+.cards__fieldset {
+  @include intends-reset;
+}
 
-@media(min-width: v.$tablet-width){
-  .cards{
+@media (min-width: $tablet-width) {
+  .cards {
     padding: 0;
     margin: 0;
   }
 }
 
-
-@media(min-width: v.$desktop-width){
-  .cards{
+@media (min-width: $desktop-width) {
+  .cards {
     grid-column: 2/3;
     grid-row: 3/4;
   }
 }
 
 .cards__list {
+  @include list-rules-reset;
   display: grid;
-  row-gap:20px;
-  @include m.list-rules-reset;
+  row-gap: 20px;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 350px;
-    row-gap:30px;
+    row-gap: 30px;
     padding-top: 15px;
     margin: 0;
   }
 
-  @media(min-width: v.$desktop-width){
+  @media (min-width: $desktop-width) {
     display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap:35px 30px;
-  padding-top: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px 30px;
+    padding-top: 0;
   }
 }
 
@@ -43,18 +43,16 @@
   box-sizing: border-box;
   margin: 0;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     min-width: 349px;
     min-height: 440px;
     padding: 0;
     margin: 0;
   }
 
-  @media(min-width: v.$desktop-width){
+  @media (min-width: $desktop-width) {
     min-width: 317px;
     min-height: 460px;
     padding: 50px 30px 30px 30px;
+  }
 }
-}
-
-

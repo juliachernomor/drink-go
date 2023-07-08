@@ -1,14 +1,12 @@
-@use "../variables" as v;
-
 .logo {
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
-  @media(min-width: v.$desktop-width){
-      display:block;
-      margin: 0;
-    }
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin: 0;
+  }
 }
 
 .logo__picture {
@@ -19,11 +17,11 @@
   margin: auto 0;
   object-fit: contain;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     width: 82px;
   }
 
-  @media(min-width: v.$desktop-width){
+  @media (min-width: $desktop-width) {
     width: 170px;
   }
 }

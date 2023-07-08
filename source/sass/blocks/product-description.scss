@@ -1,23 +1,20 @@
-@use "../variables" as v;
-@use "../mixins" as m;
-
 .product-description {
   font-family: "Montserrat", "Arial", sans-serif;
   width: 280px;
   margin: 0 auto;
   text-align: center;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     width: 768px;
     margin: 0 auto;
   }
 
-  @media(min-width: v.$desktop-width){
+  @media (min-width: $desktop-width) {
     width: 625px;
     margin: 0 auto;
     padding-top: 150px;
     text-align: left;
-    order:3;
+    order: 3;
   }
 }
 
@@ -31,7 +28,7 @@
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.7px;
-  color: v.$purple-dark;
+  color: $purple-dark;
 }
 
 .product-description__title {
@@ -42,43 +39,42 @@
   margin: 0 0 10px 0;
   letter-spacing: 0.9px;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     min-width: 608px;
     margin: 0 auto  15px auto;
     font-size: 56px;
     font-weight: 700;
     line-height: 80px;
-}
+  }
 
-@media(min-width: v.$desktop-width){
-  width: 625px;;
-  margin: 0 0  16px 0;
-}
+  @media (min-width: $desktop-width) {
+    width: 625px;
+    margin: 0 0 16px 0;
+  }
 }
 
 .product-description__description {
   width: 100%;
   font-size: 14px;
   line-height: 20px;
-  margin:0 0 20px 0;
+  margin: 0 0 20px 0;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     width: 608px;
     font-size: 20px;
     font-weight: 400;
     line-height: 32px;
-    margin:  0 auto 20px auto;
-    letter-spacing: 0.2px
+    margin: 0 auto 20px auto;
+    letter-spacing: 0.2px;
   }
 
-  @media(min-width: v.$desktop-width){
+  @media (min-width: $desktop-width) {
     width: 625px;
     margin: 0 0 40px 0;
-}
+  }
 }
 
 .product-description__wrapper {
-  display: flex;
   align-items: center;
   justify-content: start;
   width: 230px;
@@ -86,20 +82,20 @@
   flex-wrap: wrap;
   min-height: 20px;
   display: grid;
-  grid-template-columns:40px 51px 113px;
+  grid-template-columns: 40px 51px 113px;
   margin-bottom: 60px;
   grid-gap: 6px;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     justify-content: start;
-    margin-bottom:25px;
+    margin-bottom: 25px;
     column-gap: 6px 20px;
-}
+  }
 
-@media(min-width: v.$desktop-width){
-  width: 230px;
-  margin: 0;
-}
+  @media (min-width: $desktop-width) {
+    width: 230px;
+    margin: 0;
+  }
 }
 
 .product-description__old-price {
@@ -108,12 +104,12 @@
   padding: 0;
   font-size: 16px;
   line-height: 32px;
-  text-decoration-line:line-through;
-  color: v.$purple-dark;
+  text-decoration-line: line-through;
+  color: $purple-dark;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     margin-right: 0;
-}
+  }
 }
 
 .product-description__fresh-price {
@@ -124,16 +120,15 @@
   line-height: 32px;
   text-align: start;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     padding: 0;
     margin: 0;
-}
+  }
 }
 
 .product-description__button {
   display: flex;
   flex: 0 0 auto;
-  justify-content: center;
   align-items: center;
   justify-content: start;
   grid-column: 3/4;
@@ -143,7 +138,7 @@
   margin-left: 14px;
   box-sizing: border-box;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     padding: 0;
     margin-left: 12px;
   }

@@ -1,9 +1,5 @@
-@use "../variables" as v;
-@use "../mixins" as m;
-
-
 .nav__list {
-  @include m.list-rules-reset;
+  @include list-rules-reset;
 }
 
 .nav__toggle {
@@ -12,18 +8,18 @@
   width: 40px;
   height: 60px;
   padding: 0;
-  background-color: v.$base-white;
+  background-color: $base-white;
   border: none;
   cursor: pointer;
 
-  @media(min-width: v.$tablet-width){
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-@media (max-width: v.$mobile-width-only) {
+@media (max-width: $mobile-width-only) {
   .nav--closed .nav__toggle::before {
-    content: "";
+    content: " ";
     position: absolute;
     top: 22px;
     left: 22px;
@@ -35,7 +31,7 @@
 }
 
 .nav--opened .nav__toggle::before {
-  content: "";
+  content: " ";
   position: absolute;
   top: 22px;
   right: 2px;
@@ -51,15 +47,15 @@
   }
 
   .nav--opened .nav__site-list {
-    @include m.list-rules-reset ;
+    @include list-rules-reset ;
     position: absolute;
-    content: "";
-    top:60px;
-    left:-230px;
+    content: " ";
+    top: 60px;
+    left: -230px;
     width: 767px;
     margin: 0 auto;
     text-align: center;
-    background-color: v.$base-white;
+    background-color: $base-white;
     z-index: 777;
   }
 
@@ -74,11 +70,10 @@
   }
 }
 
-@media (max-width: v.$mobile-width-only) {
+@media (max-width: $mobile-width-only) {
   .nav--nojs .nav__toggle {
     display: none;
-
-}
+  }
 
   .nav--nojs .nav__site-list {
     display: block;
@@ -91,41 +86,38 @@
     justify-content: end;
   }
 
-
-    .nav--nojs.site-list__item:active{
-    background-color: v.$light-purple;
-    color: v.$purple-dark;
-    }
+  .nav--nojs.site-list__item:active {
+    background-color: $light-purple;
+    color: $purple-dark;
   }
-
-
+}
 
 .nav__user-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 
-@media(min-width: v.$tablet-width){
-    order:2;
+  @media (min-width: $tablet-width) {
+    order: 2;
   }
 
-  @media(min-width: v.$desktop-width){
-    order:2;
+  @media (min-width: $desktop-width) {
+    order: 2;
     column-gap: 20px;
   }
 }
 
-@media(min-width: v.$tablet-width){
-  .nav__site-list{
+@media (min-width: $tablet-width) {
+  .nav__site-list {
     display: flex;
-    order:0;
+    order: 0;
   }
 }
 
-@media(min-width: v.$desktop-width){
-  .nav__site-list{
+@media (min-width: $desktop-width) {
+  .nav__site-list {
     display: flex;
     column-gap: 20px;
-    order:0;
+    order: 0;
   }
 }

@@ -1,29 +1,24 @@
-@use "../mixins" as m;
-@use "../variables" as v;
-
 .radio {
   width: 280px;
   font-family: "Montserrat", "Arial", sans-serif;
-  color:v.$base-black;
+  color: $base-black;
   text-align: left;
 
-
-  @media(min-width: v.$desktop-width){
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 }
 
 .radio__title {
-    width: 280px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    margin: 0 0 20px 0;
+  width: 280px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0 0 20px 0;
 }
 
-
 .radio__list {
-  @include m.list-rules-reset;
+  @include list-rules-reset;
   margin-bottom: 32px;
 }

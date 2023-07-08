@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Drink Go</title>
-  <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
   <link href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png" type="image/png">
@@ -20,7 +20,6 @@
   <link rel="preload" href="fonts/montserrat/montserrat-bold.woff2" as="style">
   <link rel="preload" href="fonts/montserrat/montserrat-bold.woff" as="style">
 </head>
-
 <body class="page__body">
   <header class="page__header header">
     <div class="header__logo-wrapper">
@@ -79,47 +78,72 @@
       <h2 class="visually-hidden">Слайдер с кофейными напитками</h2>
       <div class="banner-slider__wrapper swiper-wrapper">
 
-        <!--здесь подключаются шаблоны слайдов-->
+        <!--начало шаблона для слайдера-->
+        <template id="slider-card">
+          <div class="banner-slider__slider-item slider-item swiper-slide">
+            <div class=" slider-item__image product-picture">
+              <a href="#">
+                <picture>
+                  <source class="product-picture__webp1440px" type="image/webp" media="(min-width: 1440px)" srcset="">
+                  <source class="product-picture__webp768px" type="image/webp" media="(min-width: 768px)" srcset="">
+                  <source class="product-picture__webp" type="image/webp" srcset="">
+                  <source class="product-picture__png1440px" type="image/png" media="(min-width:1440px)" srcset="">
+                  <source class="product-picture__png768px" type="image/png" media="(min-width:768px)" srcset="">
+                  <img class="product-picture__png" src="" srcset="" width="280" height="280" loading="lazy"
+                    alt="Свежесваренный кофе без кофеина.">
+                </picture>
+              </a>
+            </div>
+            <div class="slider-item__description product-description">
+              <span class="product-description__feature">Новинка!</span>
+              <h3 class="product-description__title"></h3>
+              <p class="product-description__description"></p>
+              <div class="product-description__wrapper">
+                <span class="product-description__old-price"></span>
+                <span class="product-description__fresh-price"></span>
+                <button class="product-description__button product-description__button--fonts button">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </template>
+        <!--конец шаблона для слайдера-->
 
       </div>
       <div class="banner-slider__toggles my-swiper-pagination swiper-pagination"></div>
       <div class="banner-slider__button-prev-wrapper my-swiper-prev swiper-button-prev"></div>
       <div class="banner-slider__button-next-wrapper my-swiper-next swiper-button-next"></div>
     </section>
-
     <section class="container__advantages advantages">
       <span class="advantages__feature">Преимущества</span>
       <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--clock">
-          <h3 class="advantage__title advantage__title--speed">Скорость</h3>
+          <h3 class="advantages__item-title advantages__item-title--speed">Скорость</h3>
           <p class="advantages__description advantages__description--br">
             Готовый напиток всегда под рукой<br> просто открой банку.
           </p>
         </li>
         <li class="advantages__item advantages__item--pocket ">
-          <h3 class="advantage__title">Удобство</h3>
+          <h3 class="advantages__item-title">Удобство</h3>
           <p class="advantages__description">
             Легко помещается и в карман,<br>и в маленькую сумочку.
           </p>
         </li>
         <li class="advantages__item advantages__item--lightning">
-          <h3 class="advantage__title">Бодрость</h3>
+          <h3 class="advantages__item-title">Бодрость</h3>
           <p class="advantages__description advantages__description--br">
             Сбалансированная доза кофеина<br> даст мощный заряд энергии.
           </p>
         </li>
         <li class="advantages__item advantages__item--leaf">
-          <h3 class="advantage__title">Экологичность</h3>
+          <h3 class="advantages__item-title">Экологичность</h3>
           <p class="advantages__description">
             Вся упаковка сделана<br> из перерабатываемых материалов.
           </p>
         </li>
       </ul>
     </section>
-
     <section class="container__filter filter">
-
       <span class="filter__feature">Каталог</span>
       <h2 class="filter__title">Каталог кофейных напитков</h2>
       <div class="filter__wrapper">
@@ -222,7 +246,7 @@
       </div>
       <div class="filter__cards cards">
         <h2 class="visually-hidden">Карточки товаров</h2>
-        <div class="form__fieldset fieldset sort">
+        <fieldset class="cards__fieldset fieldset sort">
           <legend class="sort__title">Сортировка</legend>
           <div>
             <select class="sort__select" name="sort-select" aria-label="Сортировка.">
@@ -232,10 +256,32 @@
               <option value="popular">высокий рейтинг</option>
             </select>
           </div>
-        </div>
+        </fieldset>
         <ul class="cards__list">
 
-          <!--здесь подключаются карточки товаров-->
+          <!-- начало шаблона карточки товаров-->
+          <template id="card">
+            <li class="cards__item card">
+              <a href="#">
+                <picture>
+                  <source class="card__webp" type="image/webp"
+                    media="(min-width: 320px) and(min-width: 768px) and (max-width:1440px)" srcset="">
+                  <img class="card__png" src="" srcset="" width="130" height="188" loading="lazy"
+                    alt="Кофейный напиток Decaf Flat White">
+                </picture>
+              </a>
+              <h3 class="card__title">Декаф Флэт Уайт</h3>
+              <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+              <div class="card__wrapper">
+                <span class="card__price">225₽</span>
+                <a class="card__order button button--font" href="#"><span class="card__order-button-picture"><svg
+                      role="img" width="20" height="16">
+                      <use href="img/icons/stack.svg#union-plus"></use>
+                    </svg></span><span class="card__order-button-text">В&nbsp;корзину</span></a>
+              </div>
+            </li>
+          </template>
+          <!--конец шаблона карточки товаров-->
 
         </ul>
       </div>
@@ -367,6 +413,7 @@
       </div>
     </section>
     <section class="footer__copyright copyright">
+      <h2 class="visually-hidden">Авторские права</h2>
       <a class="copyright__link" href="https://vk.com/htmlacademy" aria-label="Сайт HTML
           Academy"><span class="academy">Разработано в HTML Academy</span>
         <svg role="img" width="12" height="16">
@@ -375,60 +422,8 @@
       </a>
     </section>
   </footer>
-
-  <!--начало шаблона для слайдера-->
-  <template id="slider-card">
-    <div class="banner-slider__slider-item slider-item swiper-slide">
-      <div class=" slider-item__image product-picture">
-        <a href="#">
-          <picture>
-            <source class="product-picture__webp1440px" type="image/webp" media="(min-width: 1440px)" srcset="">
-            <source class="product-picture__webp768px" type="image/webp" media="(min-width: 768px)" srcset="">
-            <source class="product-picture__webp" type="image/webp" srcset="">
-            <source class="product-picture__png1440px" type="image/png" media="(min-width:1440px)" srcset="">
-            <source class="product-picture__png768px" type="image/png" media="(min-width:768px)" srcset="">
-            <img class="product-picture__png" src="" srcset="" width="280" height="280" loading="lazy"
-              alt="Свежесваренный кофе без кофеина.">
-          </picture>
-        </a>
-      </div>
-      <div class="slider-item__description product-description">
-        <span class="product-description__feature">Новинка!</span>
-        <h3 class="product-description__title"></h3>
-        <p class="product-description__description"></p>
-        <div class="product-description__wrapper">
-          <span class="product-description__old-price"></span>
-          <span class="product-description__fresh-price"></span>
-          <button class="product-description__button product-description__button--fonts button">Заказать</button>
-        </div>
-      </div>
-    </div>
-  </template>
-
-  <!--шаблон карточки товаров-->
-  <template id="card">
-    <li class="cards__item card">
-      <a href="#">
-        <picture>
-          <source class="card__webp" type="image/webp"
-            media="(min-width: 320px) and(min-width: 768px) and (max-width:1440px)" srcset="">
-          <img class="card__png" src="" srcset="" width="130" height="188" loading="lazy"
-            alt="Кофейный напиток Decaf Flat White">
-        </picture>
-      </a>
-      <h3 class="card__title">Декаф Флэт Уайт</h3>
-      <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
-      <div class="card__wrapper">
-        <span class="card__price">225₽</span>
-        <a class="card__order button button--font" href="#"><span class="card__order-button-picture"><svg role="img"
-              width="20" height="16">
-              <use href="img/icons/stack.svg#union-plus"></use>
-            </svg></span><span class="card__order-button-text">В&nbsp;корзину</span></a>
-      </div>
-    </li>
-  </template>
-  <script src="js/script.js" type="module"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>
+  <script src="js/script.js" type="module"></script>
 </body>
 </html>
