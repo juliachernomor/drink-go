@@ -14,7 +14,7 @@
 .my-swiper-pagination {
   width: 62px;
   height: 24px;
-  mask-image: url("/img/icons/stack.svg#slider-step");
+  mask-image: url("../../img/icons/stack.svg#slider-step");
   background-color: $base-white;
   background-repeat: no-repeat;
   background-size: 62px 10px;
@@ -26,7 +26,7 @@
   content: "";
   top: 20px;
   left: 0;
-  mask-image: url("/img/icons/stack.svg#left-row");
+  mask-image: url("../../img/icons/stack.svg#left-row");
   background-color: $purple-dark;
   background-repeat: no-repeat;
   background-size: 11px 20px;
@@ -48,7 +48,7 @@
   content: "";
   top: 20px;
   right: 0;
-  mask-image: url("/img/icons/stack.svg#left-row");
+  mask-image: url("../../img/icons/stack.svg#left-row");
   transform: rotate(180deg);
   background-color: $purple-dark;
   background-repeat: no-repeat;

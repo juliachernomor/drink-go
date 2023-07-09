@@ -67,7 +67,7 @@
 .range-toggle:hover,
 .range-toggle:focus {
   background-color: $base-white;
-  background-image: url("/img/icons/stack.svg#range-hover-focus");
+  background-image: url("../../img/icons/stack.svg#range-hover-focus");
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-position: 2px;
@@ -76,7 +76,7 @@
 
 .range-toggle:active {
   background-color: $base-white;
-  background-image: url("/img/icons/stack.svg#range-active");
+  background-image: url("../../img/icons/stack.svg#range-active");
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-position: 2px;
